@@ -16,11 +16,13 @@
         <div class="col-md-5 offset-4 collapse navbar-collapse order-3" id="navbarc">
             <ul class="navbar-nav justify-content-end mr-auto d-flex flex-fill">
                 <li class="nav-item">
-                    <a class="nav-link" href="catalogue.php">Catalogue</a></li>
+                    <a class="nav-link" href="acceuil.php">Accueil</a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="panier.php">Panier</a></li>
+                    <a class="nav-link" href="qsn.php">Qui sommes nous</a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viderpanier.php">Vider le panier</a></li>
+                    <a class="nav-link" href="gammes.php">Gammes</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a></li>
             </ul>
         </div>
     </nav>
