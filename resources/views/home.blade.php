@@ -1,3 +1,5 @@
+@extends('layout.app)
+@section('content')
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -9,15 +11,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="razer.jpg" alt="Los Angeles">
+            <img src="/image/razer.jpg" alt="Los Angeles">
         </div>
 
         <div class="item">
-            <img src="razer2.jpg" alt="Chicago">
+            <img src="/image/razer2.jpg" alt="Chicago">
         </div>
 
         <div class="item">
-            <img src="razer3.jpg" alt="New York">
+            <img src="/image/razer3.jpg" alt="New York">
         </div>
     </div>
 
@@ -31,7 +33,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+@stop
 
 
 
