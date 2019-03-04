@@ -17,9 +17,9 @@
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-md align-items-end">
-                    <a class="navbar-brand" href="/">
-                        <img src="{{asset('/assets/images/logo_final.png')}}" alt="">
-                    </a>
+                <a class="navbar-brand" href="/">
+                    <img src="{{asset('/assets/images/logo_final.png')}}" alt="">
+                </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                         aria-controls="navbar" aria-label="Toggle navigation">
@@ -33,7 +33,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="qsn.php">Qui sommes nous</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Gammes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -43,9 +44,8 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="gammes.php">Gammes</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="contact.php">Contact</a></li>
+                            <a class="nav-link text-light" href="contact.php">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
