@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-md sticky-top navbar-dark" style="background-color: #313131;">
         <div class="offset-1 order-last order-md-1">
             <a class="navbar-brand" href="#">
-                <img src="{{asset('/assets/images/logo_final.jpg')}}" width="30" height="30" alt="">
+                <img src="{{asset('/assets/images/logo_final.png')}}" width="" height="50" alt="">
             </a>
         </div>
 
@@ -15,7 +15,7 @@
         <div class="col-md-5 offset-4 collapse navbar-collapse order-3" id="navbarc">
             <ul class="navbar-nav justify-content-end mr-auto d-flex flex-fill">
                 <li class="nav-item">
-                    <a class="nav-link" href="acceuil.php">Accueil</a></li>
+                    <a class="nav-link" href="accueil.php">Accueil</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="qsn.php">Qui sommes nous</a></li>
                 <li class="nav-item">
