@@ -45,7 +45,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="gammes.php">Gammes</a></li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="contact.blade.php">Contact</a></li>
+                            <a class="nav-link text-light" href="/contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
