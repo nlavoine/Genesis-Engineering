@@ -2,10 +2,9 @@
 <div class="pb-5">
     <nav class="navbar navbar-expand-md sticky-top navbar-dark" style="background-color: #313131;">
         <div class="offset-1 order-last order-md-1">
-                <span class="navbar-brand">
-                    <i class="far fa-hourglass">
-                        <svg style="width:10px;height:10px"></svg>
-                    </i><b></b></span>
+            <a class="navbar-brand" href="#">
+                <img src="{{asset('/assets/images/logo_final.jpg')}}" width="30" height="30" alt="">
+            </a>
         </div>
 
         <button class="navbar-toggler order-md-last" type="button" data-toggle="collapse" data-target="#navbarc"
