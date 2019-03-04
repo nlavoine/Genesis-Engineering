@@ -10678,6 +10678,10 @@ header {
   padding: 0.5rem 0.9rem;
 }
 
+.navbar .nav-item {
+  padding: 0 1.5rem;
+}
+
 .dropdown-menu {
   padding: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -10695,43 +10699,6 @@ header {
 }
 
 /*Search area*/
-
-footer.eg-footer {
-  background: #282828;
-  border-top: 80px solid #000000;
-}
-
-footer .footer-info {
-  margin-top: 10px;
-  text-transform: uppercase;
-  font-size: 16px;
-  border-left: 1px solid #7c8185;
-  padding-left: 50%;
-}
-
-footer .footer-info-about {
-  padding-left: 50%;
-  font-size: 16px;
-}
-
-footer .footer-info a {
-  color: #7c8185;
-}
-
-footer .footer-info-about a {
-  color: #7c8185;
-}
-
-footer .fa:not(.fa-copyright) {
-  color: #0071e1;
-}
-
-footer.eg-footer .copyright {
-  margin-top: 15px;
-  background: #000000;
-  padding: 7px 0;
-  color: #7c8185;
-}
 
 body {
   background-color: black;
