@@ -39,8 +39,9 @@
         </div>
     </div>
 
-    <h1>Nouveautés</h1>
+
     <div class="container">
+        <h1>Nouveautés</h1>
         <div class="card-deck">
             <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
                 <div class="card">
@@ -81,6 +82,58 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+    <div class="col-md-4 carre"></div>
+    <div class="col-md-4 carre"></div>
+    <div class="col-md-4 carre"></div>
+    </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <h2>Gammes</h2>
+        <div class="card-deck">
+            <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="{{asset('/assets/images/pc1.jpg')}}" class="card-img-top" alt="watch">
+                    <div class="card-body shadow bg-white rounded degradegris">
+                        <h4 class="card-title text-center text-md-left font-weight-bold"> Produit PC </h4>
+                        <h5 class="card-text text-center text-md-left"> Notre nouvau PC </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="{{asset('/assets/images/pc1.jpg')}}" class="card-img-top" alt="watch">
+                    <div class="card-body shadow bg-white rounded degradegris">
+                        <h4 class="card-title text-center text-md-left font-weight-bold"> Produit PC </h4>
+                        <h5 class="card-text text-center text-md-left"> Notre nouvau PC </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="{{asset('/assets/images/pc1.jpg')}}" class="card-img-top" alt="watch">
+                    <div class="card-body shadow bg-white rounded degradegris">
+                        <h4 class="card-title text-center text-md-left font-weight-bold"> Produit PC </h4>
+                        <h5 class="card-text text-center text-md-left"> Notre nouvau PC </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
+                <div class="card">
+                    <img src="{{asset('/assets/images/pc1.jpg')}}" class="card-img-top" alt="watch">
+                    <div class="card-body shadow bg-white rounded degradegris">
+                        <h4 class="card-title text-center text-md-left font-weight-bold"> Produit PC </h4>
+                        <h5 class="card-text text-center text-md-left"> Notre nouvau PC </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @stop
 

@@ -10696,6 +10696,17 @@ header {
 
 /*Search area*/
 
+.carousel .carousel-item {
+  height: 600px;
+}
+
+.carre {
+  width: 100px;
+  height: 100px;
+  background: white;
+  margin: 10px auto;
+}
+
 body {
   background-color: black;
 }
