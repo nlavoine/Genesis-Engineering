@@ -10655,6 +10655,14 @@ a.text-dark:focus {
   }
 }
 
+.carousel .carousel-item {
+  height: 600px;
+}
+
+.h1 {
+  color: white;
+}
+
 body {
   background-color: black;
 }
