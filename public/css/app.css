@@ -10656,7 +10656,7 @@ a.text-dark:focus {
 }
 
 header {
-  background: url("/assets/images/background.jpg") no-repeat 20rem -50rem;
+  background: #000 url("/assets/images/background.jpg") no-repeat 20rem -50rem;
   border-bottom: 1px solid #666;
 }
 
@@ -10670,12 +10670,16 @@ header {
 }
 
 #navbar {
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
-.nav-item {
+.navbar .nav-link {
   font-size: 1rem;
   padding: 0.5rem 0.9rem;
+}
+
+.navbar .nav-item {
+  padding: 0 1.5rem;
 }
 
 .dropdown-menu {
