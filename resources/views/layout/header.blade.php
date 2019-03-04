@@ -21,7 +21,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="gammes.php">Gammes</a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a></li>
+                    <a class="nav-link" href="../contact.blade.php">Contact</a></li>
             </ul>
         </div>
     </nav>
