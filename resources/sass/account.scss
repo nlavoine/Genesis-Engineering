@@ -1,0 +1,23 @@
+form, fieldset, input
+{
+  margin: 0; padding: 0; border: none;
+}
+
+.registration, .LoginUserForm {
+  color: #fff;
+  background: #7c8185;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 430px;
+}
+
+.registration a {
+  color: $primary;
+
+}
+
+.registration fieldset {
+  padding: 20px;
+}
