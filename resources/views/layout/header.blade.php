@@ -2,7 +2,7 @@
 <header class="sticky-top">
     <div class="container">
         <div class="row justify-content-end">
-            <ul class="nav">
+            <ul class="nav subnav">
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Mon compte</a>
                 </li>
@@ -40,6 +40,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="#">Ordinateurs</a>
                                 <a class="dropdown-item" href="#">Périphériques</a>
+                                <a class="dropdown-item" href="#">Fauteuils</a>
                                 <a class="dropdown-item" href="#">Accessoires</a>
                             </div>
                         </li>
