@@ -49,7 +49,7 @@
                             <div class="form-group row justify-content-center">
                                 <button class="btn btn-primary" type="submit">Login</button>
                                 <label class="col-form-label p-2">
-                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                    <input type="checkbox" name="remember"> Remember me
                                 </label>
                             </div>
                                 <div class="form-group row justify-content-center">
