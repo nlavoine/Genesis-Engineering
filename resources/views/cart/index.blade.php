@@ -1,99 +1,128 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.app')
+@section('title')
+    Votre panier - Genesis Engineering
+@stop
+@section('content')
+    <div class="container mt-5">
+        <h1>Votre panier</h1>
+        <div class="row">
+            <div class="col-8">
+                <table class="table cart">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Quantité</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name" class="thumbnail" /></th>
+                        <td>
+                            <p class="productName">Designation du produit</p>
+                            <p class="stock">En stock</p>
+                        </td>
+                        <td>3999,49€</td>
+                        <td>
 
-    <title>Cart</title>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="productQty">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <button class="productDelete"><i class="fa fa-trash"></i></button>
+                            </div>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name" class="thumbnail" /></th>
+                        <td>
+                            <p class="productName">Designation du produit</p>
+                            <p class="stock">En stock</p>
+                        </td>
+                        <td>3999,49€</td>
+                        <td>
 
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="productQty">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <button class="productDelete"><i class="fa fa-trash"></i></button>
+                            </div>
 
-        .full-height {
-            height: 100vh;
-        }
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <table class="table price">
+                    <tbody>
+                    <tr>
 
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
+                        <td>
+                            <p class="totalPdct">2 articles</p>
+                            <p class="shipping">Livraison</p>
+                        </td>
+                        <td>
+                            <p class="totalPdct text-right">5 000,99 €</p>
+                            <p class="shipping text-right">29,00 €</p>
+                        </td>
+                    </tr>
+                    <tr>
 
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-
-    <div class="content">
-        <div class="title m-b-md">
-            Panier
-        </div>
-
-        <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://blog.laravel.com">Blog</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
+                        <td>
+                            <p class="totalPrice">Total H.T.</p>
+                            <p class="taxes">T.V.A.</p>
+                        </td>
+                        <td>
+                            <p class="totalPrice text-right">5 029,99 €</p>
+                            <p class="taxes text-right">0 €</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center"><button type="button" class="btn btn-primary btn-lg rounded-0">Commander</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+
+
+
+
+@stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
