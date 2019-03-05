@@ -10759,6 +10759,16 @@ footer.eg-footer .copyright {
   margin: 10px auto;
 }
 
+.image-produit {
+  height: auto;
+  width: 250px;
+}
+
+.product-prize {
+  font-size: 50px;
+  color: #0071e1;
+}
+
 table.cart,
 table.price {
   background: #222;
