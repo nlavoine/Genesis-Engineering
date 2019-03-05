@@ -1,0 +1,25 @@
+table.cart, table.price{
+  background: #222;
+  /*box-shadow: 0 0 10px 1px $primary ;*/
+}
+.table.cart th, .table.cart td  {
+  border-top: 0px solid #555;
+}
+
+table.price tr:first-child th, table.price tr:first-child td {
+  border-top: 0px solid #555;
+}
+table.price th, table.price td  {
+  border-top: 1px solid #555;
+}
+table.cart .thumbnail{
+  width: 150px;
+  height: auto;
+}
+
+table.cart .productDelete {
+  padding: 4px 8px;
+  margin-left: 1rem;
+  border-radius:4px;
+  border:0;
+}
