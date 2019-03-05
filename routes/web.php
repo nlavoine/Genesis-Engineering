@@ -22,3 +22,5 @@ Route::get('/cart', 'CartController@index') -> name('cart.index');
 Route::get('/contact', 'ContactUsController@index') -> name('contact.index');
 
 route::get('/qui-sommes-nous','HomeController@about') ->name('home.about');
+
+route::get('signin','UserController@account') ->name('user.account');
