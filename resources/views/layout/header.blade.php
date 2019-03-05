@@ -2,12 +2,12 @@
 <header class="sticky-top">
     <div class="container">
         <div class="row justify-content-end">
-            <ul class="nav">
+            <ul class="nav subnav">
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Mon compte</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Mon panier</a>
+                    <a class="nav-link text-light" href="{{route('cart.index')}}">Mon panier</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Rechercher</a>
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav justify-content-end mr-auto d-flex flex-fill">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="/">Accueil</a></li>
+                            <a class="nav-link text-light" href="{{route('home.index')}}">Accueil</a></li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="/qui-sommes-nous">Qui sommes nous</a></li>
                         <li class="nav-item dropdown">
@@ -40,6 +40,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="#">Ordinateurs</a>
                                 <a class="dropdown-item" href="#">Périphériques</a>
+                                <a class="dropdown-item" href="#">Fauteuils</a>
                                 <a class="dropdown-item" href="#">Accessoires</a>
                             </div>
                         </li>

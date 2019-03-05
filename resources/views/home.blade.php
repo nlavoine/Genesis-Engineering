@@ -41,7 +41,7 @@
 
 
     <div class="container">
-        <h1>Nouveautés</h1>
+        <h2>Nouveautés</h2>
         <div class="card-deck">
             <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
                 <div class="card">
@@ -84,10 +84,10 @@
 
     <div class="container">
         <div class="row">
-    <div class="col-md-4 carre"></div>
-    <div class="col-md-4 carre"></div>
-    <div class="col-md-4 carre"></div>
-    </div>
+            <div class="col-md-4 carre"></div>
+            <div class="col-md-4 carre"></div>
+            <div class="col-md-4 carre"></div>
+        </div>
     </div>
 
 
@@ -135,6 +135,33 @@
         </div>
     </div>
 
+
+
+
+
+
+    <div class="container-fluid">
+        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{asset('/assets/images/savoir-faire.jpg')}}" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Notre savoir faire</h5>
+                        <p>Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 carre"></div>
+            <div class="col-md-4 carre"></div>
+            <div class="col-md-4 carre"></div>
+        </div>
+    </div>
 @stop
 
 
