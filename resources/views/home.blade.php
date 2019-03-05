@@ -41,7 +41,7 @@
 
 
     <div class="container">
-        <h1>Nouveautés</h1>
+        <h2>Nouveautés</h2>
         <div class="card-deck">
             <div class="col-sd-6 col-md-3 mb-5 p-0 d-flex align-items-stretch">
                 <div class="card">
