@@ -4,7 +4,7 @@
         <div class="row justify-content-end">
             <ul class="nav subnav">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Mon compte</a>
+                    <a class="nav-link text-light" href="{{route('user.account')}}">Mon compte</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{{route('cart.index')}}">Mon panier</a>
@@ -45,8 +45,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="contact.php">Contact</a>
-                        </li>
+                            <a class="nav-link text-light" href="{{route('contact.index')}}">Contact</a></li>
                     </ul>
                 </div>
             </nav>

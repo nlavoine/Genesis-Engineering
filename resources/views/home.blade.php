@@ -82,11 +82,15 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container line">
         <div class="row">
-            <div class="col-md-4 carre"></div>
-            <div class="col-md-4 carre"></div>
-            <div class="col-md-4 carre"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 carre"></div>
+                <div class="col-md-4 carre"></div>
+                <div class="col-md-4 carre"></div>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -147,7 +151,11 @@
                     <img class="d-block w-100" src="{{asset('/assets/images/savoir-faire.jpg')}}" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Notre savoir faire</h5>
-                        <p>Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.</p>
+                        <p>Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est
+                            nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et
+                            datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne
+                            plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram
+                            defluat, aut ne plus aequo quid in amicitiam congeratur.</p>
                     </div>
                 </div>
             </div>
