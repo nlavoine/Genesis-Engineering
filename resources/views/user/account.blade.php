@@ -6,66 +6,57 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 text-center">
-                <div class="registration">
-                    <h2>Create an Account</h2>
+            <div class="col-md-6 ">
+                <div class="registration text-center">
+                    <h2>Create new account</h2>
 
                     <form class="RegisterUserForm" action="" method="post">
-                        <fieldset>
-                            <div class="form-group row">
-                                <label for="name" class="col-sm-3 col-form-label">Name</label>
-                                <input class="text" type="text" placeholder="Enter name" name="name" value=""/>
+                        <div class="container">
+                            <div class="form-group row justify-content-center ">
+
+                                <input class="text col-md-10 form-control " type="text" placeholder="Username*" name="name" value=""required/>
                             </div>
-                            <div class="form-group row">
-                                <label for="tel" class="col-sm-3 col-form-label">Phone Number</label>
-                                <input class="text" type="tel" placeholder="Enter tel" name="tel" value=""/>
+                            <div class="form-group row justify-content-center">
+                                <input class="text col-md-10 form-control " type="email" placeholder="Email*" name="email" value=""required/>
                             </div>
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-3 col-form-label">Email</label>
-                                <input class="text" type="email" placeholder="Enter email" name="email" value=""/>
+                            <div class="form-group row justify-content-center">
+                                <input class="text col-md-10 form-control " type="password" placeholder="Password*" name="psw"required/>
                             </div>
-                            <div class="form-group row">
-                                <label for="psw" class="col-sm-3 col-form-label">Password</label>
-                                <input class="text psw" type="password" placeholder="Enter password" name="psw"/>
-                            </div>
-                            <div class="form-group row">
-                                <input class="acceptTerms" type="checkbox" name="acceptTerms"/>
-                                <label for="acceptTerms"> I agree to the <a href="">Terms and Conditions</a> and <a
+                            <div class="form-group row justify-content-center align-items-center">
+                                <input type="checkbox" name="acceptTerms"/>
+                                <label class="pl-3 m-0" for="acceptTerms"> I agree to the <a href="">Terms and Conditions</a> and <a
                                             href="">Privacy
                                         Policy</a> </label>
                             </div>
-                            <button class="registerNew" type="submit">Register</button>
-                        </fieldset>
+                            <button class="registerNew btn btn-primary" type="submit">Register</button>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="login">
+            <div class="col-md-6">
+                <div class="login text-center">
                     <h2>Sign in</h2>
 
                     <form class="LoginUserForm" action="" method="post">
-                        <div>
-                            <div class="form-group row">
-                                <label for="username" class="col-sm-3 col-form-label"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="username" required>
+                        <div class="container">
+                            <div class="form-group row justify-content-center">
+                                <input class="form-control col-10" type="text" placeholder="Username*" name="username" required/>
                             </div>
-                            <div class="form-group row">
-                                <label for="psw" class="col-sm-3 col-form-label"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            <div class="form-group row justify-content-center">
+
+                                <input class="form-control col-10" type="password" placeholder="Password*" name="psw" required/>
                             </div>
-                            <div class="form-group row">
-                                <button type="submit">Login</button>
+                            <div class="form-group row justify-content-center">
+                                <button class="btn btn-primary" type="submit">Login</button>
                                 <label class="col-form-label p-2">
                                     <input type="checkbox" checked="checked" name="remember"> Remember me
                                 </label>
                             </div>
+                                <div class="form-group row justify-content-center">
+                                    <span class="psw p-2">Forgot <a href="#">password?</a></span>
+                                </div>
                         </div>
-                        <div class="container" style="">
-                            <div class="form-group row">
-                                <button type="button" class="cancelbtn">Cancel</button>
-                                <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>
-                        </div>
+
                     </form>
                 </div>
             </div>
