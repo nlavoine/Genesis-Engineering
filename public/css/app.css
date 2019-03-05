@@ -10700,7 +10700,7 @@ header {
 
 /*Search area*/
 
-.carousel .carousel-item {
+#carouselExampleControls .carousel-item {
   height: 600px;
 }
 
