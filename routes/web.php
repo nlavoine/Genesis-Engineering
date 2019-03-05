@@ -19,6 +19,8 @@ Route::get('/product', 'ProductController@show') -> name('product.show');
 
 Route::get('/cart', 'CartController@index') -> name('cart.index');
 
+Route::get('/cart-details', 'CartController@details') -> name('cart.details');
+
 Route::get('/contact', 'ContactUsController@index') -> name('contact.index');
 
 route::get('/qui-sommes-nous','HomeController@about') ->name('home.about');
