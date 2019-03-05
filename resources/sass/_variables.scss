@@ -1,4 +1,7 @@
 
+$primary : #0071e1;
+$secondary : #fd6a02;
+
 // Body
 $body-bg: #f8fafc;
 $body-color: #fff;
@@ -20,13 +23,15 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
-$primary : #0071e1;
-$secondary : #fd6a02;
-
-
 $blueSecondary : #73b3ee;
 $darkGrey : #282828;
 $lightGrey : #7c8185;
 
 $font-family-sans-serif: "Rajdhani", sans-serif;
+$headings-font-family: "Audiowide", sans-serif;
 
+// Form
+$input-bg:  $darkGrey;
+$input-border-color: $darkGrey;
+$input-color: #fff;
+$input-placeholder-color: #bebebe;

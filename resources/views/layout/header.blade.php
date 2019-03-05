@@ -45,8 +45,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="contact.php">Contact</a>
-                        </li>
+                            <a class="nav-link text-light" href="{{route('contact.index')}}">Contact</a></li>
                     </ul>
                 </div>
             </nav>
