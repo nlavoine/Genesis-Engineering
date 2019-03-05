@@ -22,7 +22,7 @@
                         Serie 10 et d'un espace de stockage hybride.</p>
                     <ul class="cta-list link list-unstyled">
                         <li>
-                            <button type="button" class="btn btn-primary btn-lg rounded-0">En savoir plus</button>
+                            <a href="{{route('product.show')}}" role="button" class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
                             <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier</button>
                         </li>
                     </ul>
@@ -49,7 +49,7 @@
                         Serie 10 et d'un espace de stockage hybride.</p>
                     <ul class="cta-list link list-unstyled">
                         <li>
-                            <button type="button" class="btn btn-primary btn-lg rounded-0">En savoir plus</button>
+                            <a href="{{route('product.show')}}" role="button" class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
                             <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier</button>
                         </li>
                     </ul>
@@ -75,7 +75,7 @@
                         Serie 10 et d'un espace de stockage hybride.</p>
                     <ul class="cta-list link list-unstyled">
                         <li>
-                            <button type="button" class="btn btn-primary btn-lg rounded-0">En savoir plus</button>
+                            <a href="{{route('product.show')}}" role="button" class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
                             <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier</button>
                         </li>
                     </ul>
