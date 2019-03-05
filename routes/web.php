@@ -19,4 +19,4 @@ Route::get('/product', 'ProductController@show');
 
 Route::get('/cart', 'CartController@index');
 
-Route::get('/contact', 'ContactUsController@index');
+Route::get('/contact', 'ContactUsController@index') -> name('contact.index');

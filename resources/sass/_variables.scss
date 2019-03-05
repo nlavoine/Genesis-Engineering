@@ -6,7 +6,7 @@ $secondary : #fd6a02;
 $body-bg: #f8fafc;
 $body-color: #FFF;
 
-  // Typography
+// Typography
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
@@ -18,3 +18,8 @@ $lightGrey : #7c8185;
 $font-family-sans-serif: "Rajdhani", sans-serif;
 $headings-font-family: "Rajdhani", sans-serif;
 
+// Form
+$input-bg:  $darkGrey;
+$input-border-color: $darkGrey;
+$input-color: #fff;
+$input-placeholder-color: #bebebe;
