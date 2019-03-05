@@ -10758,6 +10758,41 @@ footer.eg-footer .copyright {
   margin: 10px auto;
 }
 
+.image-produit {
+  height: auto;
+  width: 250px;
+}
+
+.product-prize {
+  font-size: 50px;
+  color: #0071e1;
+}
+
+.sectionGamme {
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3) inset;
+  background-repeat: no-repeat;
+}
+
+.sectionGamme:nth-child(odd) {
+  background-position: center left;
+}
+
+.sectionGamme:nth-child(odd) .sectionContent {
+  justify-content: end;
+}
+
+.sectionGamme:nth-child(even) {
+  background-position: center right;
+}
+
+.sectionGamme:nth-child(even) .sectionContent {
+  justify-content: start;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
 table.cart,
 table.price {
   background: #222;

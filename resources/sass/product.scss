@@ -7,3 +7,29 @@
   font-size:50px ;
   color: $primary;
 }
+
+.sectionGamme {
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3) inset;
+  background-repeat: no-repeat;
+
+  &:nth-child(odd) {
+    background-position: center left;
+
+    .sectionContent {
+      justify-content: end;
+    }
+  }
+
+  &:nth-child(even) {
+    background-position: center right;
+
+    .sectionContent {
+      justify-content: start;
+    }
+  }
+}
+
+.mb-8 {
+  margin-bottom: 8 * $spacer;
+}
+
