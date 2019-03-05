@@ -15,6 +15,6 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/productlist', 'ProductController@index');
 
-Route::get('/product', 'ProductController@show');
+Route::get('/product', 'ProductController@show') -> name('product.show');
 
 Route::get('/cart', 'CartController@index');
