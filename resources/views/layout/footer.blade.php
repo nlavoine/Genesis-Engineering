@@ -5,7 +5,7 @@
                 <div class="footer-info-about">
                     <ul class="list-unstyled">
                         <li><a href="" ><i class="fa fa-angle-right"></i> Accueil</a></li>
-                        <li><a href="" ><i class="fa fa-angle-right"></i> Qui sommes-nous ?</a></li>
+                        <li><a href="/qui-sommes-nous" ><i class="fa fa-angle-right"></i> Qui sommes-nous ?</a></li>
                         <li><a href="" ><i class="fa fa-angle-right"></i> Gammes</a></li>
                         <li><a href="/contact" ><i class="fa fa-angle-right"></i> Contact</a></li>
                     </ul>

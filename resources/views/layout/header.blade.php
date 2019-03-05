@@ -31,7 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="/">Accueil</a></li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="qsn.php">Qui sommes nous</a></li>
+                            <a class="nav-link text-light" href="/qui-sommes-nous">Qui sommes nous</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink"
                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

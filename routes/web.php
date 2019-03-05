@@ -18,3 +18,5 @@ Route::get('/productlist', 'ProductController@index');
 Route::get('/product', 'ProductController@show');
 
 Route::get('/cart', 'CartController@index');
+
+route::get('/qui-sommes-nous','HomeController@about');
