@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('title')
-    Aboutpage
+    Qui sommes-nous? - Genesis Engineering
 @stop
 @section('content')
 
