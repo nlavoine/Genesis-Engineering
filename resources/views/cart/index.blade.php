@@ -18,7 +18,8 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name" class="thumbnail" /></th>
+                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name"
+                                             class="thumbnail"/></th>
                         <td>
                             <p class="productName">Designation du produit</p>
                             <p class="stock">En stock</p>
@@ -27,7 +28,7 @@
                         <td>
 
                             <div class="input-group mb-3">
-                                <select class="custom-select" id="productQty">
+                                <select class="custom-select rounded-0" id="productQty">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -39,7 +40,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name" class="thumbnail" /></th>
+                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name"
+                                             class="thumbnail"/></th>
                         <td>
                             <p class="productName">Designation du produit</p>
                             <p class="stock">En stock</p>
@@ -48,7 +50,7 @@
                         <td>
 
                             <div class="input-group mb-3">
-                                <select class="custom-select" id="productQty">
+                                <select class="custom-select rounded-0" id="productQty">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -88,7 +90,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="text-center"><button type="button" class="btn btn-primary btn-lg rounded-0">Commander</button></td>
+                        <td colspan="2" class="text-center">
+                            <form method="get" action="{{route('cart.details')}}">
+                                <input type="submit" class="btn btn-primary btn-lg rounded-0" value="Commander"/>
+                            </form>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

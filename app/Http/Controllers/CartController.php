@@ -10,7 +10,14 @@ class CartController extends Controller
         return view('cart/index');
     }
 
-    public function valid() {
-        echo "valider panier";
+    public function details() {
+        return view('cart/details');
     }
+
+
+
+
+    /*public function valid() {
+        echo "valider panier";
+    }*/
 }
