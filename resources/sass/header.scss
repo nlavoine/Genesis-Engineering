@@ -21,7 +21,7 @@ header{
   padding: 0 1.5rem;
 
 }
-.dropdown-menu{
+.navbar .dropdown-menu{
   padding: 0;
   background: rgba(0, 0, 0, 0.9);
   border: 0;
@@ -30,12 +30,12 @@ header{
 .nav-item.dropdown.show{
   background: rgba(0, 0, 0, 0.9);
 }
-.dropdown-item {
+.navbar .dropdown-item {
   color: #f8f9fa;
   padding: 0.8rem;
   font-size: 0.9rem;
 }
-.dropdown-item:hover {
+.navbar .dropdown-item:hover {
   background: $primary;
   color: #fff;
 

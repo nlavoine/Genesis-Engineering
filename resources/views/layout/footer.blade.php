@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 justify-content-center">
-                <div class="footer-info">
+                <div class="footer-info-about">
                     <ul class="list-unstyled">
                         <li><a href="" ><i class="fa fa-angle-right"></i> CGV</a></li>
                         <li><a href="" ><i class="fa fa-angle-right"></i> CGU</a></li>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 justify-content-center">
-                <div class="footer-info">
+                <div class="footer-info-about">
                     <ul class="list-unstyled">
                         <li><a href="" ><i class="fa fa-facebook-square"></i> Facebook</a></li>
                         <li><a href="" ><i class="fa fa-twitter"></i> Twitter</a></li>

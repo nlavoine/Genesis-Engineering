@@ -1,88 +1,79 @@
 @extends('layout.app')
 @section('title')
-    Gamme
+    Gamme - Genesis Engineering
 @stop
 @section('content')
 
-    <div class="container"><h1>Gamme</h1></div>
-    <section class="sectionGamme mt-5"
-             style='background: url("{{asset('/assets/images/product-left.jpg')}}") no-repeat'>
-        <div class="container p-0">
-            <div class="row justify-content-end align-self-end">
-                <div class="col-sm-6 col-md-7 mb-5 p-2 text-justify">
-                    <h2>Razer Blade Pro 17</h2>
-                    <p class="regular-text text-gray8">La puissance d'un PC dans un portable
-                        <br><span class="cat_price" style="margin-bottom: 0;"></span>
-                        La nouvelle référence des ordinateurs portables aussi puissants que ceux de bureau, le Razer
-                        Blade
-                        Pro 17" est remarquemablement fin et possede un puissant processeur quadricoeur
-                        Intel<sup>®</sup>
-                        Core<sup>™</sup> i7 de 7e génération, une carte graphique NVIDIA<sup>®</sup> GeForce<sup>®</sup>
-                        GTX
-                        Serie 10 et d'un espace de stockage hybride.</p>
-                    <ul class="cta-list link list-unstyled">
-                        <li>
-                            <a href="{{route('product.show')}}" role="button" class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
-                            <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier</button>
-                        </li>
-                    </ul>
+
+    <div class="container mt-5">
+        <h1>Gamme</h1>
+        <ul class="breadcrumb">
+            <li>
+                <a href="">Gamme</a> <span class="divider"> /&nbsp;</span>
+            </li>
+            <li class="dropdown open">
+                <a class="dropdown-toggle" id="branches" role="button" data-toggle="dropdown" href="#">Ordinateurs <b
+                            class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{route('product.index')}}">Ordinateurs</a>
+                    <a class="dropdown-item" href="{{route('product.index')}}">Périphériques</a>
+                    <a class="dropdown-item" href="{{route('product.index')}}">Fauteuils</a>
+                    <a class="dropdown-item" href="{{route('product.index')}}">Accessoires</a>
+                </div>
+
+            </li>
+            <span class="divider"> /&nbsp;</span>
+            <li class="dropdown open">
+                <a class="dropdown-toggle" id="branches" role="button" data-toggle="dropdown" href="#">Laptop <b
+                            class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{route('product.index')}}">Laptop</a>
+                    <a class="dropdown-item" href="{{route('product.index')}}">PC</a>
+                </div>
+            </li>
+            <span class="divider"> /&nbsp;</span>
+            <li class="dropdown open">
+                <a class="dropdown-toggle" id="branches" role="button" data-toggle="dropdown" href="#">17" <b
+                            class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{route('product.index')}}">16"</a>
+                    <a class="dropdown-item" href="{{route('product.index')}}">17"</a>
+                    <a class="dropdown-item" href="{{route('product.index')}}">18"</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    @foreach($products as $product)
+        <section class="sectionGamme">
+
+            <div class="container-fluid sectionGamme mb-8 mt-5">
+                <div class="row no-gutters sectionContent">
+                    <div class="col-sm-6 col-md-5 mb-5 p-2 text-justify">
+                        <img src="{{asset('/assets/images/product-left.jpg')}}">
+                    </div>
+                    <div class="col-sm-6 col-md-4 ml-6 mb-5 text-justify">
+                        <h2>{{$product->name}} <span class="product-price">{{ $product->price }}€</span></h2>
+
+                        <p class="regular-text text-gray8">
+                            {!! $product->details !!}
+                        </p>
+                        <ul class="cta-list link list-unstyled">
+                            <li>
+                                <a href="{{route('product.show', $product->id)}}" role="button"
+                                   class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
+                                <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    @endforeach
 
 
-    <section class="sectionGamme mt-5"
-             style='background: url("{{asset('/assets/images/product-right.jpg')}}") no-repeat right'>
-        <div class="container p-0">
-            <div class="row justify-content-start align-self-end">
-                <div class="col-sm-6 col-md-7 mb-5 p-2 text-justify">
-                    <h2>Razer Blade Pro 18</h2>
-                    <p class="regular-text text-gray8">La puissance d'un PC dans un portable
-                        <br><span class="cat_price" style="margin-bottom: 0;"></span>
-                        La nouvelle référence des ordinateurs portables aussi puissants que ceux de bureau, le Razer
-                        Blade
-                        Pro 17" est remarquemablement fin et possede un puissant processeur quadricoeur
-                        Intel<sup>®</sup>
-                        Core<sup>™</sup> i7 de 7e génération, une carte graphique NVIDIA<sup>®</sup> GeForce<sup>®</sup>
-                        GTX
-                        Serie 10 et d'un espace de stockage hybride.</p>
-                    <ul class="cta-list link list-unstyled">
-                        <li>
-                            <a href="{{route('product.show')}}" role="button" class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
-                            <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sectionGamme mt-5"
-             style='background: url("{{asset('/assets/images/product-left.jpg')}}") no-repeat'>
-        <div class="container p-0">
-            <div class="row justify-content-end align-self-end">
-                <div class="col-sm-6 col-md-7 mb-5 p-2 text-justify">
-                    <h2>Razer Blade Pro 19</h2>
-                    <p class="regular-text text-gray8">La puissance d'un PC dans un portable
-                        <br><span class="cat_price" style="margin-bottom: 0;"></span>
-                        La nouvelle référence des ordinateurs portables aussi puissants que ceux de bureau, le Razer
-                        Blade
-                        Pro 17" est remarquemablement fin et possede un puissant processeur quadricoeur
-                        Intel<sup>®</sup>
-                        Core<sup>™</sup> i7 de 7e génération, une carte graphique NVIDIA<sup>®</sup> GeForce<sup>®</sup>
-                        GTX
-                        Serie 10 et d'un espace de stockage hybride.</p>
-                    <ul class="cta-list link list-unstyled">
-                        <li>
-                            <a href="{{route('product.show')}}" role="button" class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
-                            <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 

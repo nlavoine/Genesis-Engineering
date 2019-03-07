@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Product;
 
 class ProductController extends Controller
 {
     public function index() {
-        return view('product/index');
+        $products = Product::all();
+        return view('product/index', ['products' => $products]);
     }
 
-    public function show() {
-        return view('product/show');
+    public function show($id) {
+        $product = Product::where('id', $id)->first();
+        return view('product/show', ['product' => $product]);
     }
-
 
 }

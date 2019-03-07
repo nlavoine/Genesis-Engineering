@@ -5,8 +5,9 @@ $secondary : #fd6a02;
 // Body
 $body-bg: #f8fafc;
 $body-color: #fff;
+$link-color: #fff;
 
-// Typography
+  // Typography
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 1.1rem;
 $line-height-base: 1.6;
@@ -48,3 +49,11 @@ $input-placeholder-color: #bebebe;
 //Cart
 $card-bg: #222;
 $card-color: white;
+
+//BreadCrumb
+//$breadcrumb-divider : quote(">");
+$breadcrumb-bg:                     #050505;
+$breadcrumb-divider-color:          $primary;
+$breadcrumb-active-color:           #fff;
+
+//$breadcrumb-border-radius:          $border-radius !default;
