@@ -10,4 +10,7 @@ class Address extends Model
     {
         return $this->belongsTo('app\Order');
     }
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

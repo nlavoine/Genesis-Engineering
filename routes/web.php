@@ -26,3 +26,5 @@ Route::get('/contact', 'ContactUsController@index')->name('contact.index');
 route::get('/qui-sommes-nous', 'HomeController@about')->name('home.about');
 
 route::get('signiontroller@account')->name('user.account');
+
+route::get('/secret','SecretController@index')->name('secret.index');

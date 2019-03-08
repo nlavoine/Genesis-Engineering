@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -41,5 +40,9 @@ class User extends Authenticatable
     public function role()
     {
         return $this->hasOne('App\Role');
+    }
+
+    public function users(){
+        return $this->hasMany('App\Address');
     }
 }
