@@ -13,14 +13,14 @@ class UpdateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
+        /*Schema::table('orders', function (Blueprint $table) {
             $table->unsignedBigInteger('address_id_shipping');
 
             $table->foreign('address_id_shipping')->references('id')->on('addresses');
             $table->unsignedBigInteger('address_id_receipt');
 
             $table->foreign('address_id_receipt')->references('id')->on('addresses');
-        });
+        });*/
     }
 
     /**
@@ -30,9 +30,11 @@ class UpdateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('address_id_shipping');
-            $table->dropColumn('address_id_receipt');
-        });
+       /* Schema::table('orders', function (Blueprint $table) {
+            $table->dropColumn('address_id');
+            $table->dropColumn('address_id1');
+            $table->dropColumn('address_shipping');
+
+        });*/
     }
 }
