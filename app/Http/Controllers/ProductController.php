@@ -10,12 +10,12 @@ class ProductController extends Controller
 {
     public function index() {
         $products = Product::all();
-        return view('product/index', ['products' => $products]);
+        return view('product.index', ['products' => $products]);
     }
 
     public function show($id) {
-        $product = Product::where('id', $id)->first();
-        return view('product/show', ['product' => $product]);
+        $product = Product::findOrFail($id);
+        return view('product.show', ['product' => $product]);
     }
 
 }
