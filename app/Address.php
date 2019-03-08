@@ -6,11 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-    public function orders()
+    public function ordersShipping()
     {
-        return $this->belongsTo('app\Order');
+        return $this->belongsTo('App\Order', 'address_id_shipping');
     }
-    public function user(){
-        return $this->belongsTo('App\User');
+
+    public function ordersReceipt()
+    {
+        return $this->belongsTo('App\Order', 'address_id_receipt');
+    }
+
+    public function user()
+    {
+        return $this->hasMany('App\User');
     }
 }

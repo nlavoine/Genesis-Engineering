@@ -8,26 +8,26 @@ class Order extends Model
 {
     public function addressShipping()
     {
-        return $this->hasOne('app\Address');
+        return $this->hasOne('App\Address', 'address_id_shipping');
     }
 
     public function addressReceipt()
     {
-        return $this->hasOne('app\Address');
+        return $this->hasOne('App\Address', 'address_id_receipt');
     }
 
     public function user()
     {
-        return $this->hasOne('app\User');
+        return $this->hasOne('App\User');
     }
 
     public function shipping()
     {
-        return $this->hasOne('app\Shipping');
+        return $this->hasOne('App\Shipping');
     }
 
     public function products()
     {
-        return $this->belongsToMany('app\Product');
+        return $this->belongsToMany('App\Product');
     }
 }
