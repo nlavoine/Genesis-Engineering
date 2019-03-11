@@ -41,8 +41,8 @@
                     <a class="dropdown-item" href="{{route('product.index')}}">18"</a>
                 </div>
             </li>
-
         </ul>
+
     </div>
     @foreach($products as $product)
         <section class="sectionGamme">
@@ -56,7 +56,7 @@
                         <h2>{{$product->name}} <span class="product-price">{{ $product->price }}€</span></h2>
 
                         <p class="regular-text text-gray8">
-                            {!! $product->details !!}
+                            {!! $product->details_1 !!}
                         </p>
                         <ul class="cta-list link list-unstyled">
                             <li>
