@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('home.index');
 
-Route::get('/productlist', 'ProductController@index')->name('product.index');
+Route::get('/productlist/{sortby}', 'ProductController@index')->name('product.index');
 
 Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
