@@ -16,17 +16,17 @@ class CreateAddressesTable extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('label', 100);
-            $table->string('first_name', 45);
-            $table->string('last_name');
+            $table->string('first_name', 50);
+            $table->string('last_name',50);
             $table->string('address_1', 32);
             $table->string('address_2', 32);
             $table->string('city', 80);
-            $table->string('state');
-            $table->string('country');
-            $table->integer('zip_code', 5);
-            $table->unsignedBigInteger('user_id');
+            $table->string('state',80);
+            $table->string('country',80);
+            $table->string('zip_code', 5);
             $table->timestamps();
 
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

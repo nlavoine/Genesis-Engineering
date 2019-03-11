@@ -17,15 +17,16 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('number');
             $table->dateTime('date');
+            $table->timestamps();
+
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('address_id_shipping');
 
-            $table->foreign('address_id_shipping')->references('id')->on('addresses');
-            $table->unsignedBigInteger('address_id_receipt');
+            $table->unsignedBigInteger('address_shipping_id');
+            $table->foreign('address_shipping_id')->references('id')->on('addresses');
 
-            $table->foreign('address_id_receipt')->references('id')->on('addresses');
-            $table->timestamps();
+            $table->unsignedBigInteger('address_receipt_id');
+            $table->foreign('address_receipt_id')->references('id')->on('addresses');
         });
 
     }
