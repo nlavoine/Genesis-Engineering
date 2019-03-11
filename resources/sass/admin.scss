@@ -1,44 +1,112 @@
-.admin .listProduct {
-  border-radius:4px;
-  overflow: hidden;
-
+.admin {
+  .listProduct {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
   thead {
     background: #0c0c0c;
     font-size: 1.3rem;
   }
-  thead tr th{
-    border-top: 0 !important; ;
+
+  thead tr th {
+    border-top: 0 !important;;
   }
-  tbody tr:nth-child(even){
+
+  tbody tr:nth-child(even) {
     background: #101010;
-    &:hover{
+
+    &:hover {
       background: #303030;
     }
   }
-  tbody tr:nth-child(odd){
+
+  tbody tr:nth-child(odd) {
     background: #191919;
-    &:hover{
+
+    &:hover {
       background: #393939;
     }
   }
-  .fa{
+
+  .fa {
     padding: 5px;
-    border-radius:4px;
-  }
-  .fa-search{
-    background:#1d643b;
-  }
-  .fa-pencil-square-o{
-    background: #b14a01;
-  }
-  .fa-trash-o{
-    background: #761b18;
-    color: #fff;
+    border-radius: 4px;
   }
 
-  button.noStyle{
+  .fa-search {
+    background: #1d643b;
+  }
+
+  .fa-pencil-square-o {
+    background: #b14a01;
+  }
+
+  .fa-trash-o {
+    background: #761b18;
+    color: #fff;
+    padding: 5px 0.4rem;
+  }
+
+  button.noStyle {
     border: 0;
     padding: 0;
     background: none;
+    color:#fff;
   }
+  .toolbox {
+    a:hover {
+      text-decoration: none;
+    }
+    li{
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  /**
+  View admin.product.edit
+   */
+  .editProduct input:not(.btn) {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid $secondary;
+    width: 100%;
+    color: #fff;
+    padding: 1rem;
+    &::placeholder {
+      color: rgba(255,255,255, 0.8);
+    }
+  }
+  .editProduct .product-price{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid $secondary;
+    background: $primary;
+    float: none;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0;
+    box-shadow: none;
+    padding: 0.8rem;
+  }
+  .editProduct  .price {
+    border: 0 !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    width: auto !important;
+    padding: 0.2rem !important;
+  }
+  .editProduct .details{
+    width: 100%;
+    height: 300px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid $secondary;
+    color: #fff;
+    padding: 1rem;
+
+    &::placeholder {
+      color: rgba(255,255,255, 0.8);
+    }
+  }
+
 }

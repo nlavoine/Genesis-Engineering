@@ -1,4 +1,4 @@
-@extends('back_office.layout.app')
+@extends('Backoffice.layout.app')
 @section('title')
     Back Office - Genesis Engineering
 @stop

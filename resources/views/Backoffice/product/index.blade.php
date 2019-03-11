@@ -1,10 +1,10 @@
-@extends('back_office.layout.app')
+@extends('Backoffice.layout.app')
 @section('title')
     Gamme - Genesis Engineering
 @stop
 @section('content')
 
-    <div class="container mt-5 admin">
+    <div class="container mt-5">
         <h1>Liste des produits</h1>
 
         <table class="table w-100 mt-5 listProduct">
@@ -22,11 +22,20 @@
                     <td class="align-middle">{{$product->name}}</td>
                     <td class="align-middle">{{$product->price}}</td>
                     <td class="align-middle">{{$product->stock}}</td>
-                    <td><a href="{{route('admin.product.show', $product->id)}}" title="Afficher"><i class="fa fa-search"></i></a></td>
-                    <td><a href="{{route('admin.product.edit', $product->id)}}" title="Modifier"><i class="fa fa-pencil-square-o"></i></a></td>
-                    <td><form method="Post" action="{{route('admin.product.destroy', $product->id)}}">
+                    <td>
+                        <a href="{{route('admin.product.show', $product->id)}}" title="Afficher">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{route('admin.product.edit', $product->id)}}" title="Modifier">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <form method="Post" action="{{route('admin.product.destroy', $product->id)}}">
                             @csrf
-                            <input type="hidden" name="_method" value="DELETE" />
+                            <input type="hidden" name="_method" value="DELETE"/>
                             <button class="noStyle" type="submit"><i class="fa fa-trash-o"></i></button>
                         </form>
                     </td>

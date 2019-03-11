@@ -31,6 +31,7 @@ route::get('/qui-sommes-nous', 'HomeController@about')->name('home.about');
 
 route::get('signiontroller@account')->name('user.account');
 
+route::get('/secret','SecretController@index')->name('secret.index');
 
 /**
  * Routes Back_Office
@@ -41,4 +42,3 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 
-route::get('/secret','SecretController@index')->name('secret.index');

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        return view('back_office.home');
+        return view('Backoffice.home');
     }
 
 }
