@@ -17,7 +17,7 @@
  */
 Route::get('/', 'HomeController@index')->name('home.index');
 
-Route::get('/productlist', 'ProductController@index')->name('product.index');
+Route::get('/productlist/{sortby}', 'ProductController@index')->name('product.index');
 
 Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
@@ -39,3 +39,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('', 'Backoffice\HomeController@index')->name('index');
     Route::resource('product', 'Backoffice\ProductController');
 });
+
+
+route::get('/secret','SecretController@index')->name('secret.index');

@@ -38,10 +38,10 @@
                                 Gammes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{route('product.index')}}">Ordinateurs</a>
-                                <a class="dropdown-item" href="{{route('product.index')}}">Périphériques</a>
-                                <a class="dropdown-item" href="{{route('product.index')}}">Fauteuils</a>
-                                <a class="dropdown-item" href="{{route('product.index')}}">Accessoires</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Ordinateurs</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Périphériques</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Fauteuils</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Accessoires</a>
                             </div>
                         </li>
                         <li class="nav-item">

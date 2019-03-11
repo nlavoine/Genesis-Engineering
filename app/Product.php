@@ -10,4 +10,14 @@ class Product extends Model
     {
         return $this->hasOne('App\Category');
     }
+
+    public function orders()
+    {
+        return $this->belongsToMany('App\Order');
+    }
+
+    public function images()
+    {
+        return $this->belongsTo('App\Image');
+    }
 }

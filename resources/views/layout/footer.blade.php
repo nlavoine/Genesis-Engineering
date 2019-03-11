@@ -25,6 +25,7 @@
                         <li><a href="" ><i class="fa fa-facebook-square"></i> Facebook</a></li>
                         <li><a href="" ><i class="fa fa-twitter"></i> Twitter</a></li>
                         <li><a href="" ><i class="fa fa-instagram"></i> Instagram</a></li>
+                        <li><a href="/secret" style="color: #282828"><i class="fa fa-heart" style="color: #282828"></i> Secret</a></li>
                     </ul>
                 </div>
             </div>
