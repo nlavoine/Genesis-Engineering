@@ -19,9 +19,9 @@ class CreateAddressesTable extends Migration
             $table->string('first_name', 50);
             $table->string('last_name',50);
             $table->string('address_1', 32);
-            $table->string('address_2', 32);
+            $table->string('address_2', 32)->nullable();
             $table->string('city', 80);
-            $table->string('state',80);
+            $table->string('state',80)->nullable();
             $table->string('country',80);
             $table->string('zip_code', 5);
             $table->timestamps();
