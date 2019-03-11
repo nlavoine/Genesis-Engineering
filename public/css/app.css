@@ -10916,6 +10916,53 @@ table.cart .stock {
   text-decoration: none;
 }
 
+.admin .listProduct {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.admin .listProduct thead {
+  background: #0c0c0c;
+  font-size: 1.3rem;
+}
+
+.admin .listProduct thead tr th {
+  border-top: 0 !important;
+}
+
+.admin .listProduct tbody tr:nth-child(even) {
+  background: #101010;
+}
+
+.admin .listProduct tbody tr:nth-child(even):hover {
+  background: #303030;
+}
+
+.admin .listProduct tbody tr:nth-child(odd) {
+  background: #191919;
+}
+
+.admin .listProduct tbody tr:nth-child(odd):hover {
+  background: #393939;
+}
+
+.admin .listProduct .fa {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.admin .listProduct .fa-search {
+  background: #1d643b;
+}
+
+.admin .listProduct .fa-pencil-square-o {
+  background: #b14a01;
+}
+
+.admin .listProduct .fa-trash-o {
+  background: #761b18;
+}
+
 body {
   background-color: black;
 }

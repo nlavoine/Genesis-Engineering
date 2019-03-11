@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
     {
          $this->call([
              ProductTableSeeder::class,
-             AddressesTableSeeder::class,
+             CategoriesTableSeeder::class,
              UsersTableSeeder::class,
-             CategoryTableSeeder::class
+             AddressesTableSeeder::class
          ]);
     }
 }

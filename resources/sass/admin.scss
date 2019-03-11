@@ -1,0 +1,37 @@
+.admin .listProduct {
+  border-radius:4px;
+  overflow: hidden;
+
+  thead {
+    background: #0c0c0c;
+    font-size: 1.3rem;
+  }
+  thead tr th{
+    border-top: 0 !important; ;
+  }
+  tbody tr:nth-child(even){
+    background: #101010;
+    &:hover{
+      background: #303030;
+    }
+  }
+  tbody tr:nth-child(odd){
+    background: #191919;
+    &:hover{
+      background: #393939;
+    }
+  }
+  .fa{
+    padding: 5px;
+    border-radius:4px;
+  }
+  .fa-search{
+    background:#1d643b;
+  }
+  .fa-pencil-square-o{
+    background: #b14a01;
+  }
+  .fa-trash-o{
+    background: #761b18;
+  }
+}

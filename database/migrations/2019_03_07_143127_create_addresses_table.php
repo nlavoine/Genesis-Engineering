@@ -23,7 +23,7 @@ class CreateAddressesTable extends Migration
             $table->string('city', 80);
             $table->string('state');
             $table->string('country');
-            $table->integer('zip_code', 5);
+            $table->string('zip_code', 5);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

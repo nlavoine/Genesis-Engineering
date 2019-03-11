@@ -14,12 +14,12 @@
     <title> @yield('title')</title>
 </head>
 <body>
-@include('layout.header')
+@include('back_office.layout.header')
 
 @yield('content')
 
 
-@include('layout.footer')
+@include('back_office.layout.footer')
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

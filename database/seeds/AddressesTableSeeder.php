@@ -13,18 +13,15 @@ class AddressesTableSeeder extends Seeder
     {
         DB::table('addresses')->insert([
             'label'=>'domicile',
-        'first_name'=>'Michel',
+            'first_name'=>'Michel',
             'last_name'=>'Nguyen',
-            'address'=>'Grande Rue',
-        'complement'=>'33',
+            'address_1'=>'Grande Rue',
+            'address_2'=>'33',
             'city'=>'Valence',
             'state'=>'Rhone-Alpes',
             'country'=>'france',
             'zip_code'=>26000,
             'user_id'=>1,
-
-
-
         ]);
     }
 }
