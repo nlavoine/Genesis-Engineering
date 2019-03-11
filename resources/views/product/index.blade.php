@@ -15,10 +15,10 @@
                 <a class="dropdown-toggle" id="branches" role="button" data-toggle="dropdown" href="#">Ordinateurs <b
                             class="caret"></b></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{route('product.index')}}">Ordinateurs</a>
-                    <a class="dropdown-item" href="{{route('product.index')}}">Périphériques</a>
-                    <a class="dropdown-item" href="{{route('product.index')}}">Fauteuils</a>
-                    <a class="dropdown-item" href="{{route('product.index')}}">Accessoires</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">Ordinateurs</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">Périphériques</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">Fauteuils</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">Accessoires</a>
                 </div>
 
             </li>
@@ -27,8 +27,8 @@
                 <a class="dropdown-toggle" id="branches" role="button" data-toggle="dropdown" href="#">Laptop <b
                             class="caret"></b></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{route('product.index')}}">Laptop</a>
-                    <a class="dropdown-item" href="{{route('product.index')}}">PC</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">Laptop</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">PC</a>
                 </div>
             </li>
             <span class="divider"> /&nbsp;</span>
@@ -36,11 +36,20 @@
                 <a class="dropdown-toggle" id="branches" role="button" data-toggle="dropdown" href="#">17" <b
                             class="caret"></b></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{route('product.index')}}">16"</a>
-                    <a class="dropdown-item" href="{{route('product.index')}}">17"</a>
-                    <a class="dropdown-item" href="{{route('product.index')}}">18"</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">16"</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">17"</a>
+                    <a class="dropdown-item" href="{{route('product.index', 'name')}}">18"</a>
                 </div>
             </li>
+        </ul>
+
+    </div>
+    <div class="container">
+        <ul class="filterArea">
+            <li><span>Trier par :&nbsp;</span></li>
+            <li><a href="{{route('product.index', 'name')}}">Nom</a></li>
+            <span class="divider">&nbsp; | &nbsp;</span>
+            <li><a href="{{route('product.index', 'price')}}">Prix</a></li>
         </ul>
 
     </div>
