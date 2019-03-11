@@ -50,6 +50,5 @@ class CategoriesTableSeeder extends Seeder
             'parent_id' => 1,
         ]);
 
-
     }
 }

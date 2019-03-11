@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ProductTableSeeder extends Seeder
+class ProductsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,7 +20,9 @@ class ProductTableSeeder extends Seeder
                         il combine mobilité et style à la puissance idéale pour le travail et le jeu.',
             'price' => 1499.99,
             'stock' => 50,
+            'category_id' => 1,
         ]);
+
         DB::table('products')->insert([
             'name' => 'Razer Blade 14',
             'details_1' => 'Puissant. Portable. Parfait.<br>
@@ -30,7 +32,10 @@ class ProductTableSeeder extends Seeder
                         processeur quadricœur Intel<sup>®</sup> Core<sup>™</sup>i7 de 7e génération',
             'price' => 2349.99,
             'stock' => 50,
+            'category_id' => 1,
+
         ]);
+
         DB::table('products')->insert([
             'name' => 'Razer Blade 15 (2018)',
             'details_1' => 'Ultra Rapide. Ultra Petit. Ultra Puissant.<br>
@@ -41,7 +46,10 @@ class ProductTableSeeder extends Seeder
                         pilotés par NVIDIA GeForce GTX 1060 ainsi qu\'un double espace de stockage.',
             'price' => 2649.99,
             'stock' => 50,
+            'category_id' => 1,
+
         ]);
+
         DB::table('products')->insert([
             'name' => 'Razer Blade Pro 17',
             'details_1' => 'La puissance d\'un PC dans un portable<br>
@@ -51,8 +59,9 @@ class ProductTableSeeder extends Seeder
                         GeForce<sup>®</sup> GTX Serie 10 et d\'un espace de stockage hybride.',
             'price' => 4499.99,
             'stock' => 50,
-        ]);
+            'category_id' => 1,
 
+        ]);
 
     }
 }
