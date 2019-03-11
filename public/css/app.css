@@ -10961,6 +10961,13 @@ table.cart .stock {
 
 .admin .listProduct .fa-trash-o {
   background: #761b18;
+  color: #fff;
+}
+
+.admin .listProduct button.noStyle {
+  border: 0;
+  padding: 0;
+  background: none;
 }
 
 body {

@@ -27,12 +27,10 @@ class ProductController extends Controller {
      * @throws \Exception
      */
     public function destroy(Product $product) {
-        //$productToDelete = Product::find($product);
-        //$product->delete();
-        Product::destroy($product);
 
+        $product->delete();
 
-        //return redirect()->route('admin.product.index');
+        return redirect()->route('admin.product.index');
     }
 
 }

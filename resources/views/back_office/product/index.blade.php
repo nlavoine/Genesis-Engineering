@@ -24,9 +24,13 @@
                     <td class="align-middle">{{$product->stock}}</td>
                     <td><a href="{{route('admin.product.show', $product->id)}}" title="Afficher"><i class="fa fa-search"></i></a></td>
                     <td><a href="{{route('admin.product.edit', $product->id)}}" title="Modifier"><i class="fa fa-pencil-square-o"></i></a></td>
-                    <td><a href="{{route('admin.product.destroy', $product->id)}}" title="Supprimer"><i class="fa fa-trash-o"></i></a></td>
+                    <td><form method="Post" action="{{route('admin.product.destroy', $product->id)}}">
+                            @csrf
+                            <input type="hidden" name="_method" value="DELETE" />
+                            <button class="noStyle" type="submit"><i class="fa fa-trash-o"></i></button>
+                        </form>
+                    </td>
                 </tr>
-
             @endforeach
             </tbody>
         </table>
