@@ -12,22 +12,22 @@ class ImagesTableSeeder extends Seeder
     public function run()
     {
         DB::table('images')->insert([
-            'url' => '/assets/images/razer_stealth_13.png',
+            'url' => 'assets/images/razer_stealth_13.png',
             'product_id' => 1,
         ]);
 
         DB::table('images')->insert([
-            'url' => '/assets/images/razer_14.jpg',
+            'url' => 'assets/images/razer_14.jpg',
             'product_id' => 2,
         ]);
 
         DB::table('images')->insert([
-            'url' => '/assets/images/razer_15.jpg',
+            'url' => 'assets/images/razer_15.jpg',
             'product_id' => 3,
         ]);
 
         DB::table('images')->insert([
-            'url' => '/assets/images/razer_pro_17.jpg',
+            'url' => 'assets/images/razer_pro_17.jpg',
             'product_id' => 4,
         ]);
     }
