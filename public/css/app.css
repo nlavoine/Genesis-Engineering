@@ -11000,6 +11000,10 @@ table.cart .stock {
   margin-bottom: 0.5rem;
 }
 
+.admin .editProduct h2 {
+  margin-top: 0.5rem;
+}
+
 .admin .editProduct input:not(.btn) {
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid #fd6a02;

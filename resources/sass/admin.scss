@@ -68,6 +68,9 @@
   /**
   View admin.product.edit
    */
+  .editProduct h2{
+    margin-top: 0.5rem;
+  }
   .editProduct input:not(.btn) {
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid $secondary;

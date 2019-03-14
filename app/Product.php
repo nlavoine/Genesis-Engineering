@@ -18,6 +18,7 @@ class Product extends Model
 
     public function images()
     {
-        return $this->belongsTo('App\Image');
+        //return $this->belongsTo('App\Image')->orderBy('order', 'asc');
+        return $this->hasMany('App\Image');
     }
 }

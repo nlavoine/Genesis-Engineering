@@ -11,7 +11,24 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('products')->insert([
+
+        $faker = Faker\Factory::create();
+
+        $limit = 33;
+
+        for ($i = 0; $i < $limit; $i++) {
+            DB::table('products')->insert([ //,
+
+                'name' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+                'details_1' => $faker->paragraph($nbSentences = 10, $variableNbSentences = true),
+                'details_2' => $faker->paragraph($nbSentences = 10, $variableNbSentences = true),
+                'details_3' => $faker->paragraph($nbSentences = 10, $variableNbSentences = true),
+                'price' => $faker->randomFloat(2,$min = 0, $max = 3000),
+                'stock' => $faker->randomDigitNotNull,
+                'category_id' => $faker->numberBetween(1,4),
+            ]);
+        }
+        /*DB::table('products')->insert([
             'name' => 'Razer Blade Stealth 13',
             'details_1' => 'Déplacez-vous Avec Puissance<br>
                         L\'ordinateur Razer Blade Stealth 13” est équipé d\'une carte graphique 25 W NVIDIA<sup>®</sup> 
@@ -61,7 +78,7 @@ class ProductsTableSeeder extends Seeder
             'stock' => 50,
             'category_id' => 1,
 
-        ]);
+        ]);*/
 
     }
 }
