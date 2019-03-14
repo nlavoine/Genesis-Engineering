@@ -1,4 +1,4 @@
 @extends('layout.admin')
 @section('title')
-    Produits - Admin
+    Client - Admin
 @stop

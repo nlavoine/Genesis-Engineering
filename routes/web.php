@@ -29,13 +29,13 @@ route::get('/user','UserController@account')->name('user.account');
 
 route::get('/secret','SecretController@index')->name('secret.index');
 
-route::get('/admin', 'Admin\HomeController@index')->name('admin.index');
-
 route::prefix('admin')->name('admin.')->group(function() {
+    route::get('/', 'Admin\HomeController@index')->name('index');
     route::get('products', 'Admin\HomeController@products')->name('products');
     route::get('users','Admin\HomeController@users')->name('users');
     route::get('orders','Admin\HomeController@orders')->name('orders');
-
 });
 
-route::resource('products', 'ProductsController');
+route::resource('products', 'Admin\ProductController');
+route::resource('users', 'Admin\UserController');
+route::resource('orders', 'Admin\OrderController');
