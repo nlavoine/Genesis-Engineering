@@ -28,3 +28,5 @@ route::get('/qui-sommes-nous', 'HomeController@about')->name('home.about');
 route::get('signin', 'UserController@account')->name('user.account');
 
 route::get('/secret', 'SecretController@index')->name('secret.index');
+
+route::resource('user','UserController');

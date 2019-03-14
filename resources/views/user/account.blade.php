@@ -33,7 +33,7 @@
                                         Policy</a> </label>
                             </div>
                             <button type="submit" class="btn btn-outline-primary rounded-0 font-weight-bold"
-                                    style="border-width: 2px">Register
+                                    style="border-width: 2px" name="sign up">Register
                             </button>
                         </div>
                     </form>
