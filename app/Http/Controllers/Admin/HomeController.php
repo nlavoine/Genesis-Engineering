@@ -11,19 +11,4 @@ class HomeController extends Controller
     {
         return view('admin.home');
     }
-
-    public function products()
-    {
-        return view('admin.product.index');
-    }
-
-    public function users()
-    {
-        return view('admin.user.index');
-    }
-
-    public function orders()
-    {
-        return view('admin.order.index');
-    }
 }

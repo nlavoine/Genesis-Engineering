@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Validator;
 
 class ProductController extends Controller
 {
@@ -15,7 +17,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+        return view('admin.products.index', ['products' => $products]);
     }
 
     /**
@@ -25,7 +28,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.products.create');
+
     }
 
     /**
@@ -36,7 +40,32 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'details_1' => 'alpha_num|nullable',
+            'details_2' => 'alpha_num|nullable',
+            'details_3' => 'alpha_num|nullable',
+            'category_id' => 'required|numeric',
+        ]);
+
+        $product = new Product;
+
+        $product->name = $validated['name'];
+        $product->price = $validated['price'];
+        $product->stock = $validated['stock'];
+        $product->details_1 = $validated['details_1'];
+        $product->details_2 = $validated['details_2'];
+        $product->details_3 = $validated['details_3'];
+        $product->category_id = $validated['category_id'];
+
+        $product->save();
+
+        $request->session()->flash('success', 'Ajout de produit fait !!! Bravoooooooooooooo <3 ;-)');
+
+        return redirect()->route('admin.products.index');
+
     }
 
     /**
@@ -47,7 +76,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.product.show', ['product' => $product]);
+
+        return view('admin.products.show', ['product' => $product]);
     }
 
     /**
@@ -56,9 +86,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Product $product, Category $categories)
     {
-        //
+        $categories = Category::all();
+        $product->load('category');
+
+        return view('admin.products.edit', ['product' => $product], ['categories' => $categories]);
     }
 
     /**
