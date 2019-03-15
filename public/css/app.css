@@ -10927,9 +10927,15 @@ table.cart .stock {
 }
 
 .admin {
+  background-color: #fff !important;
+  color: #111;
   /**
   View admin.product.edit
    */
+}
+
+.admin section a {
+  color: #111;
 }
 
 .admin .listProduct {
@@ -10938,11 +10944,15 @@ table.cart .stock {
 }
 
 .admin hr {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.admin table {
+  color: #111;
 }
 
 .admin thead {
-  background: #0c0c0c;
+  background: #aaa;
   font-size: 1.3rem;
 }
 
@@ -10951,19 +10961,19 @@ table.cart .stock {
 }
 
 .admin tbody tr:nth-child(even) {
-  background: #101010;
+  background: #d0d0d0;
 }
 
 .admin tbody tr:nth-child(even):hover {
-  background: #303030;
+  background: #c0c0c0;
 }
 
 .admin tbody tr:nth-child(odd) {
-  background: #191919;
+  background: #d9d9d9;
 }
 
 .admin tbody tr:nth-child(odd):hover {
-  background: #393939;
+  background: #c9c9c9;
 }
 
 .admin .fa {
@@ -10989,7 +10999,7 @@ table.cart .stock {
   border: 0;
   padding: 0;
   background: none;
-  color: #fff;
+  color: #111;
 }
 
 .admin .toolbox a:hover {
@@ -11005,44 +11015,48 @@ table.cart .stock {
 }
 
 .admin .editProduct input:not(.btn) {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #fd6a02;
   width: 100%;
-  color: #fff;
+  color: #111;
   padding: 1rem;
 }
 
 .admin .editProduct input:not(.btn)::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .admin .editProduct input:not(.btn):-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .admin .editProduct input:not(.btn)::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .admin .editProduct input:not(.btn)::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.admin .product-price {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .admin .editProduct .product-price {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #fd6a02;
   background: #0071e1;
   float: none;
   width: 100%;
   margin: 1.5rem 0;
-  padding: 0;
   box-shadow: none;
-  padding: 0.8rem;
 }
 
 .admin .editProduct .price {
   border: 0 !important;
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
   width: auto !important;
   padding: 0.2rem !important;
 }
@@ -11051,26 +11065,30 @@ table.cart .stock {
   width: 100%;
   height: 300px;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #fd6a02;
-  color: #fff;
+  color: #111;
   padding: 1rem;
 }
 
 .admin .editProduct .details::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .admin .editProduct .details:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .admin .editProduct .details::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .admin .editProduct .details::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.admin .page-link {
+  color: #666;
 }
 
 body {

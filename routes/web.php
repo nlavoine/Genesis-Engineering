@@ -36,9 +36,9 @@ route::get('/secret','SecretController@index')->name('secret.index');
 /**
  * Routes Back_Office
  */
-Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('', 'Backoffice\HomeController@index')->name('index');
-    Route::resource('product', 'Backoffice\ProductController');
+Route::prefix('admin')->name('admin.')->namespace('Backoffice')->group(function () {
+    Route::get('', 'HomeController@index')->name('index');
+    Route::resource('product', 'ProductController');
 });
 
 
