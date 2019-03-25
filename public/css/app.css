@@ -11016,7 +11016,7 @@ table.cart .stock {
 
 .admin .editProduct input:not(.btn) {
   background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid #fd6a02;
+  border: 1px solid #666;
   width: 100%;
   color: #111;
   padding: 1rem;
@@ -11046,7 +11046,7 @@ table.cart .stock {
 
 .admin .editProduct .product-price {
   background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid #fd6a02;
+  border: 1px solid #666;
   background: #0071e1;
   float: none;
   width: 100%;
@@ -11066,7 +11066,7 @@ table.cart .stock {
   height: 300px;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid #fd6a02;
+  border: 1px solid #666;
   color: #111;
   padding: 1rem;
 }
@@ -11089,6 +11089,23 @@ table.cart .stock {
 
 .admin .page-link {
   color: #666;
+}
+
+.admin .editProduct input.w-40 {
+  width: 40%;
+}
+
+.admin .is-invalid {
+  border: 1px solid #880000 !important;
+}
+
+.admin .toolButtons {
+  position: fixed;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid #666;
+  padding: 4px;
+  padding-bottom: 15px;
 }
 
 body {

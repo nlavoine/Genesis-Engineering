@@ -84,7 +84,7 @@
   }
   .editProduct input:not(.btn) {
     background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid $secondary;
+    border: 1px solid #666;
     width: 100%;
     color: #111;
     padding: 1rem;
@@ -99,7 +99,7 @@
   }
   .editProduct .product-price{
     background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid $secondary;
+    border: 1px solid #666;
     background: $primary;
     float: none;
     width: 100%;
@@ -117,7 +117,7 @@
     height: 300px;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid $secondary;
+    border: 1px solid #666;
     color: #111;
     padding: 1rem;
 
@@ -127,5 +127,22 @@
   }
   .page-link{
     color: #666;
+  }
+  .editProduct input.w-40{
+    width:40%;
+  }
+
+  .is-invalid{
+    border:1px solid #880000 !important;
+  }
+
+
+  .toolButtons {
+    position: fixed;
+    bottom: 0px;
+    background: rgba(0,0,0,0.4);
+    border-top:1px solid #666;
+    padding: 4px;
+    padding-bottom:15px;
   }
 }

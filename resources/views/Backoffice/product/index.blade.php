@@ -8,7 +8,7 @@
         <h1>Liste des produits</h1>
         <p class="text-right"><a href="{{route('admin.product.create')}}" class="btn btn-primary btn-lg rounded-0 mt-3">Ajouter un produit</a></p>
 
-        <table class="table w-100 mt-1 listProduct">
+        <table class="table w-100 mt-1 mb-5 listProduct">
             <thead>
             <tr>
                 <th style="width: 70%;">Désignation</th>
