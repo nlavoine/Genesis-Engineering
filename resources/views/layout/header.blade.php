@@ -1,29 +1,55 @@
 <!--Nav-->
-<div class="pb-5">
-    <nav class="navbar navbar-expand-md sticky-top navbar-dark" style="background-color: #313131;">
-        <div class="offset-1 order-last order-md-1">
-            <a class="navbar-brand" href="#">
-                <img src="{{asset('/assets/images/logo_final.png')}}" width="" height="50" alt="">
-            </a>
-        </div>
-
-        <button class="navbar-toggler order-md-last" type="button" data-toggle="collapse" data-target="#navbarc"
-                aria-controls="navbarc" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="col-md-5 offset-4 collapse navbar-collapse order-3" id="navbarc">
-            <ul class="navbar-nav justify-content-end mr-auto d-flex flex-fill">
+<header class="sticky-top">
+    <div class="container">
+        <div class="row justify-content-end">
+            <ul class="nav subnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="accueil.php">Accueil</a></li>
+                    <a class="nav-link text-light" href="{{route('user.account')}}">Mon compte</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="qsn.php">Qui sommes nous</a></li>
+                    <a class="nav-link text-light" href="{{route('cart.index')}}">Mon panier</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gammes.php">Gammes</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a></li>
+                    <a class="nav-link text-light" href="#">Rechercher</a>
+                </li>
             </ul>
+
         </div>
-    </nav>
-</div>
+        <div class="row">
+            <nav class="navbar navbar-expand-md align-items-end">
+                <a class="navbar-brand" href="/">
+                    <img src="{{asset('/assets/images/logo_final.png')}}" alt="">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                        aria-controls="navbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav justify-content-end mr-auto d-flex flex-fill">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{{route('home.index')}}">Accueil</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{{route('home.about')}}">Qui sommes nous</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Gammes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Ordinateurs</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Périphériques</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Fauteuils</a>
+                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Accessoires</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{{route('contact.index')}}">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
 <!--Nav-->

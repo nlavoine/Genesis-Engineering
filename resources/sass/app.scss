@@ -11,8 +11,16 @@
 @import 'header';
 @import 'footer';
 @import 'home';
+@import 'product';
+@import 'cart';
+
+
 
 
 body {
   background-color:black;
+}
+
+h2{
+  margin-top: 3rem;
 }

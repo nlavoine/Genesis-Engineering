@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home.index');
 
-Route::get('/productlist', 'ProductController@index');
+Route::get('/productlist/{sortby}', 'ProductController@index')->name('product.index');
 
-Route::get('/product', 'ProductController@show');
+Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
-Route::get('/cart', 'CartController@index');
+Route::get('/cart', 'CartController@index')->name('cart.index');
+
+Route::get('/cart-details', 'CartController@details')->name('cart.details');
+
+Route::get('/contact', 'ContactUsController@index')->name('contact.index');
+
+route::get('/qui-sommes-nous', 'HomeController@about')->name('home.about');
+
+route::get('signiontroller@account')->name('user.account');
+
+route::get('/secret','SecretController@index')->name('secret.index');

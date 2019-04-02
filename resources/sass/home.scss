@@ -1,0 +1,36 @@
+#carouselExampleControls .carousel-item{
+  height: 600px;
+}
+
+.carre {
+  width:150px;
+  height:100px;
+}
+.carre:nth-child(1){
+  background: rgba(0,0,0,0.15);
+}
+/*.carre:nth-child(1):after{
+  content:'';
+  width: 75px;
+  height: 75px;
+  border:1px solid #fff;
+  display: block;
+  position:relative;
+  left:100%;
+  margin-left: -75px;
+  top: 15px;
+}*/
+
+.carre:nth-child(2){
+  background: rgba(0,0,0,0.3);
+}
+
+.carre:nth-child(3){
+  background: rgba(0,0,0,0.45);
+}
+
+
+.line .row{
+  background: #000 url("/assets/images/carbon-pattern.jpg");
+}
+

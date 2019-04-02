@@ -1,11 +1,24 @@
 
+$primary : #0071e1;
+$secondary : #fd6a02;
+
 // Body
 $body-bg: #f8fafc;
+$body-color: #fff;
+$link-color: #fff;
 
-// Typography
+  // Typography
 $font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
+$font-size-base: 1.1rem;
 $line-height-base: 1.6;
+
+// Headings
+$h1-font-size:  $font-size-base * 2.5 !default;
+$h2-font-size:  $font-size-base * 2 !default;
+$h3-font-size:  $font-size-base * 1.75 !default;
+$h4-font-size:  $font-size-base * 1.5 !default;
+$h5-font-size:  $font-size-base * 1.25 !default;
+$h6-font-size:  $font-size-base !default;
 
 // Colors
 $blue: #3490dc;
@@ -19,8 +32,28 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
-$blueMain : #0071e1;
 $blueSecondary : #73b3ee;
 $darkGrey : #282828;
 $lightGrey : #7c8185;
-$tonicMain : #fd6a02;
+
+$font-family-sans-serif: "Rajdhani", sans-serif;
+$headings-font-family: "Audiowide", sans-serif;
+
+// Form
+$input-bg:  $darkGrey;
+$input-border-color: $darkGrey;
+$input-color: #fff;
+$input-placeholder-color: #bebebe;
+
+
+//Cart
+$card-bg: #222;
+$card-color: white;
+
+//BreadCrumb
+//$breadcrumb-divider : quote(">");
+$breadcrumb-bg:                     #050505;
+$breadcrumb-divider-color:          $primary;
+$breadcrumb-active-color:           #fff;
+
+//$breadcrumb-border-radius:          $border-radius !default;

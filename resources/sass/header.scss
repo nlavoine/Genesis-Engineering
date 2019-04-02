@@ -1,0 +1,48 @@
+header{
+  background: #000 url("/assets/images/background.jpg") no-repeat 20rem -50rem ;
+  border-bottom: 1px solid #666;
+}
+
+.navbar{
+  padding: 0;
+  vertical-align: bottom;
+}
+.navbar-brand{
+  padding: 0.5rem;
+}
+#navbar{
+  padding-bottom: 0.5rem;
+}
+.navbar .nav-link{
+  font-size: 1rem;
+  padding: 0.5rem 0.9rem;
+}
+.navbar .nav-item{
+  padding: 0 1.5rem;
+
+}
+.navbar .dropdown-menu{
+  padding: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border: 0;
+  margin-top: 0;
+}
+.nav-item.dropdown.show{
+  background: rgba(0, 0, 0, 0.9);
+}
+.navbar .dropdown-item {
+  color: #f8f9fa;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+.navbar .dropdown-item:hover {
+  background: $primary;
+  color: #fff;
+
+}
+.subnav a{
+  font-size: 0.9rem;
+}
+
+
+/*Search area*/
