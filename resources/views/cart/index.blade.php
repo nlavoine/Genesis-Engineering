@@ -68,7 +68,6 @@
                 <table class="table price">
                     <tbody>
                     <tr>
-
                         <td>
                             <p class="totalPdct">2 articles</p>
                             <p class="shipping">Livraison</p>
@@ -79,7 +78,6 @@
                         </td>
                     </tr>
                     <tr>
-
                         <td>
                             <p class="totalPrice">Total H.T.</p>
                             <p class="taxes">T.V.A.</p>

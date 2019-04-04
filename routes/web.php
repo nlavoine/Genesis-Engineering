@@ -23,7 +23,7 @@ Route::get('/product/{product}', 'ProductController@show')->name('product.show')
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
 
-Route::get('/cart-details', 'CartController@details')->name('cart.details');
+Route::get('/cart-details', 'CartController@details')->name('cart.details')->middleware('auth');
 
 Route::get('/contact', 'ContactUsController@index')->name('contact.index');
 
@@ -42,3 +42,7 @@ Route::prefix('admin')->name('admin.')->namespace('Backoffice')->group(function 
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

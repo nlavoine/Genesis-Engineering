@@ -3,17 +3,32 @@
     <div class="container">
         <div class="row justify-content-end">
             <ul class="nav subnav">
+                @if(Auth::check())
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{{route('user.account')}}">Mon compte</a>
                 </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{route('login')}}">Connexion</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{{route('cart.index')}}">Mon panier</a>
                 </li>
+
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Déconnexion</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Rechercher</a>
                 </li>
             </ul>
-
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-md align-items-end">
