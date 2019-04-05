@@ -4,7 +4,10 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use \App\Http\Middleware\Role;
+use App\Role;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -50,5 +53,9 @@ class User extends Authenticatable
     public function orders()
     {
         return $this->belongsTo('App\Order');
+    }
+    public function hasRole()
+    {
+        return Role::select('label')->where('id', $this->role_id)->first();
     }
 }

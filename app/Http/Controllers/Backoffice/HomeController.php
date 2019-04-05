@@ -17,13 +17,16 @@ class HomeController extends Controller
 
     public function index()
     {
-        $user = Auth::user();
+        /*$user = Auth::user();
         if ($user->role_id == 3) {
+
 
             return view('home');
         } else {
             return view('Backoffice.home');
-        }
+        }*/
+
+        return view('Backoffice.home');
 
     }
 
