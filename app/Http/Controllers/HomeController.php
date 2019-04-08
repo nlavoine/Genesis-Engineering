@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $newProducts = Product::all()->sortBy('created_at')->take(4);
+        $newProducts = Product::orderBy('created_at')->take(4)->get();
         $newProducts->load('images');
 
 

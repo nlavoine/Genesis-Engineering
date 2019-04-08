@@ -28,6 +28,7 @@ class Role {
         }
 
         //Si pas le bon role, redirection
-        return redirect('home.forbidden');
+        return redirect('/forbidden');
+        //return route('home.forbidden');
     }
 }
