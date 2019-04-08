@@ -8,7 +8,7 @@ use App\Image;
 
 class ProductController extends Controller
 {
-    public function index($sortby) {
+    public function index($id) {
         $products = Product::all()->sortBy($sortby);
         return view('product.index', ['products' => $products]);
     }

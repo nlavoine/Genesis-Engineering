@@ -51,10 +51,16 @@
                                 Gammes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Ordinateurs</a>
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Périphériques</a>
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Fauteuils</a>
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Accessoires</a>
+                                @php
+                                $categories = \App\Category::all()->where('parent_id', null);
+
+                                foreach($categories as $category){
+
+                                @endphp
+                                    <a class="dropdown-item" href="{{route('category.index', $category->id)}}">{{$category->name}}</a>
+                                @php
+                                }
+                                @endphp
                             </div>
                         </li>
                         <li class="nav-item">

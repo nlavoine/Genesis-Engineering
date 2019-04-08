@@ -17,7 +17,7 @@
  */
 Route::get('/', 'HomeController@index')->name('home.index');
 
-Route::get('/productlist/{sortby}', 'ProductController@index')->name('product.index');
+Route::get('/category/{category}', 'CategoryController@index')->name('category.index');
 
 Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
