@@ -35,6 +35,10 @@ route::get('/secret', 'SecretController@index')->name('secret.index');
 
 Route::resource('user', 'UserController')->middleware('auth');
 
+Route::put('user/{user}/updatemdp', 'UserController@updatemdp')->name('user.updatemdp')->middleware('auth');
+
+Route::get('user/{user}/editmdp', 'UserController@editmdp')->name('user.editmdp')->middleware('auth');
+
 /**
  * Routes Back_Office
  */

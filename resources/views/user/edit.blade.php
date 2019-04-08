@@ -32,26 +32,7 @@
                 </form>
             </div>
 
-            <div class="col-md-6 mt-3">
-                <h1>Modifier mon mot de passe :</h1>
-                <form action="{{ route('user.update', $user) }}" method="POST">
-                    @csrf
-                    @method('PUT')
 
-                    <div class="form-group">
-                        <h4>Mot de passe</h4>
-                        <label for="password"></label>
-                        <input class="form-control" type="password" name="password" value="">
-                    </div>
-                    <div class="form-group">
-                        <h4>Confirmer le mot de passe</h4>
-                        <label for="password"></label>
-                        <input class="form-control" type="password" name="password" value="">
-                    </div>
-
-                    <button class="btn btn-primary" type="submit">Modifier mon mot de passe</button>
-                </form>
-            </div>
 
         </div>
     </div>

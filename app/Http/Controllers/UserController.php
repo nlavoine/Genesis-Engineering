@@ -63,6 +63,10 @@ class UserController extends Controller
         return view('user.edit', ['user' => $user]);
     }
 
+    public function editmdp(User $user)
+    {
+        return view('user.editmdp', ['user' => $user]);
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -73,41 +77,41 @@ class UserController extends Controller
     public function update()
     {
         if (auth()->guest()) {
-            flash("Vous devez être connecté pour voir cette page.")->error();
-
             return redirect('/connexion');
         }
 
         $user = auth()->user();
+
         auth()->user()->update([
             'first_name' => request('first_name'),
             'last_name' => request('last_name'),
             'email' => request('email'),
-            'password' => bcrypt(request('password')),
         ]);
         $user->save();
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('infosuccess', 'Mise à jour de vos infos effectué avec succès !');
     }
 
     public function updatemdp()
     {
         if (auth()->guest()) {
-            flash("Vous devez être connecté pour voir cette page.")->error();
-
             return redirect('/connexion');
         }
 
         $user = auth()->user();
-        auth()->user()->update([
-            'first_name' => request('first_name'),
-            'last_name' => request('last_name'),
-            'email' => request('email'),
-            'password' => bcrypt(request('password')),
-        ]);
-        $user->save();
 
-        return redirect()->route('user.index');
+        if(request('password') == request('password_confirm')){
+
+            auth()->user()->update([
+                'password' => bcrypt(request('password')),
+            ]);
+            $user->save();
+
+            return redirect()->route('user.index')->with('mdpsucces', 'Mise à jour du mot de votre mot de passe effectué !');
+        }
+
+
+        return redirect()->route('user.editmdp', ['user' => $user])->with('mdperror', 'Erreur sur la confirmation du mot de passe.');
     }
 
     /**
