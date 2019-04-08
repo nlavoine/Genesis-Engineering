@@ -33,6 +33,8 @@ route::get('/user', 'UserController@account')->name('user.account');
 
 route::get('/secret', 'SecretController@index')->name('secret.index');
 
+Route::resource('user', 'UserController')->middleware('auth');
+
 /**
  * Routes Back_Office
  */

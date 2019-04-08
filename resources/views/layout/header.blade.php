@@ -5,7 +5,7 @@
             <ul class="nav subnav">
                 @if(Auth::check())
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{{route('user.account')}}">Mon compte</a>
+                    <a class="nav-link text-light" href="{{route('user.index')}}">Mon compte</a>
                 </li>
                 @else
                     <li class="nav-item">
