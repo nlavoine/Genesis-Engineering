@@ -1,7 +1,7 @@
 <footer class="eg-footer">
-    <div class="container-fluid">
-        <div class="row mt-4">
-            <div class="col-md-3 col-sm-6 justify-content-center">
+    <div class="container">
+        <div class="row mt-4 justify-content-between">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="footer-info-about">
                     <ul class="list-unstyled">
                         <li><a href="" ><i class="fa fa-angle-right"></i> Accueil</a></li>
@@ -11,7 +11,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="footer-info-about">
                     <ul class="list-unstyled">
                         <li><a href="" ><i class="fa fa-angle-right"></i> CGV</a></li>
@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="footer-info-about">
                     <ul class="list-unstyled">
                         <li><a href="" ><i class="fa fa-facebook-square"></i> Facebook</a></li>
@@ -29,14 +29,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 justify-content-center">
-                <div class="footer-info">
-                    <ul class="list-unstyled">
-                        <li><a href="" ><i class="fa fa-angle-right"></i> FR</a></li>
-                        <li><a href="" ><i class="fa fa-angle-right"></i> UK</a></li>
-                    </ul>
-                </div>
-            </div>
+
         </div>
     </div>
     <section class="copyright">

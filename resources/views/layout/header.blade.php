@@ -31,12 +31,10 @@
             </ul>
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-md align-items-end">
-                <a class="navbar-brand" href="/">
-                    <img src="{{asset('/assets/images/logo_final.png')}}" alt="">
-                </a>
+            <nav class="navbar navbar-expand-lg align-items-end">
+                <a class="navbar-brand w-lg-75" href="{{route('home.index')}}"> <img src="{{asset('/assets/images/logo_final.png')}}" alt="" class="img-fluid"> </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                <button class="navbar-toggler navbar-dark float-right" type="button" data-toggle="collapse" data-target="#navbar"
                         aria-controls="navbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
