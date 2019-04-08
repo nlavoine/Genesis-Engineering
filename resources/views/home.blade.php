@@ -83,7 +83,7 @@
                         <img src="{{asset($product->images[0]->url)}}" class="card-img-top" alt="watch">
                         <div class="card-body d-flex flex-column shadow degradegris">
                             <p class="card-title text-center text-md-left font-weight-bold">{{$product->category->name}}</p>
-                            <a href="{{route('product.index', $product->category->name)}}" class="btn btn-primary btn-block mt-auto">En savoir plus</a>
+                            <a href="{{route('category.index', $product->category->id)}}" class="btn btn-primary btn-block mt-auto">En savoir plus</a>
                         </div>
                     </div>
                 </div>
