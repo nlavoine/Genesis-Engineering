@@ -11,7 +11,6 @@
                 <form action="{{ route('user.update', $user) }}" method="POST">
                     @csrf
                     @method('PUT')
-
                     <div class="form-group">
                         <h4>Nom</h4>
                         <label for="last_name"></label>

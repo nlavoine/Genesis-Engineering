@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Address;
 use App\Http\Requests\UserRequest;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class UserController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('user.index', ['user' => $user]);
+        $addresses = Address::all()->where('user_id', $user->id);
+        return view('user.index', ['user' => $user, 'addresses' => $addresses]);
     }
 
     /**
@@ -33,7 +35,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -44,12 +46,17 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
+    }
+
+    public function address(Address $address)
+    {
+        return view('user.address', ['address' => $address]);
     }
 
     /**
@@ -67,6 +74,13 @@ class UserController extends Controller
     {
         return view('user.editmdp', ['user' => $user]);
     }
+
+    public function editaddress(Address $address)
+    {
+        $address = Address::find($address->id);
+        return view('user.editaddress', ['address' => $address]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -92,7 +106,8 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('infosuccess', 'Mise à jour de vos infos effectué avec succès !');
     }
 
-    public function updatemdp()
+    public
+    function updatemdp()
     {
         if (auth()->guest()) {
             return redirect('/connexion');
@@ -100,7 +115,7 @@ class UserController extends Controller
 
         $user = auth()->user();
 
-        if(request('password') == request('password_confirm')){
+        if (request('password') == request('password_confirm')) {
 
             auth()->user()->update([
                 'password' => bcrypt(request('password')),
@@ -114,13 +129,36 @@ class UserController extends Controller
         return redirect()->route('user.editmdp', ['user' => $user])->with('mdperror', 'Erreur sur la confirmation du mot de passe.');
     }
 
+    public function updateaddress(Address $address)
+    {
+        if (auth()->guest()) {
+            return redirect('/connexion');
+        }
+
+        $address->update([
+            'label' => request('label'),
+            'last_name' => request('last_name'),
+            'first_name' => request('first_name'),
+            'address_1' => request('address_1'),
+            'address_2' => request('address_2'),
+            'city' => request('city'),
+            'state' => request('state'),
+            'country' => request('country'),
+            'zip_code' => request('zip_code'),
+
+        ]);
+
+        return redirect()->route('user.address', $address)->with('infosuccess', 'Mise à jour de vos infos effectué avec succès !');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public
+    function destroy($id)
     {
         //
     }

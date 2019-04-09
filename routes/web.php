@@ -39,6 +39,12 @@ Route::put('user/{user}/updatemdp', 'UserController@updatemdp')->name('user.upda
 
 Route::get('user/{user}/editmdp', 'UserController@editmdp')->name('user.editmdp')->middleware('auth');
 
+Route::get('user/address/{address}', 'UserController@address')->name('user.address')->middleware('auth');
+
+Route::get('user/address/{address}/edit', 'UserController@editaddress')->name('user.editaddress')->middleware('auth');
+
+Route::put('user/address/{address}/update', 'UserController@updateaddress')->name('user.updateaddress')->middleware('auth');
+
 /**
  * Routes Back_Office
  */
@@ -52,10 +58,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-
 /**
  * ERREURS
  */
  Route::get('/forbidden', 'HomeController@forbidden')->name('home.forbidden');
-

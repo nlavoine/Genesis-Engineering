@@ -12,11 +12,11 @@
                         {{ session('infosuccess') }}
                     </div>
                 @endif
-                    @if (session('mdpsucces'))
-                        <div class="alert alert-success">
-                            {{ session('mdpsucces') }}
-                        </div>
-                    @endif
+                @if (session('mdpsucces'))
+                    <div class="alert alert-success">
+                        {{ session('mdpsucces') }}
+                    </div>
+                @endif
                 <h1>Mes infos :</h1>
                 <p>Prénom : {{ $user->first_name }}<p/>
                 <p>Nom : {{ $user->last_name }}</p>
@@ -28,6 +28,20 @@
                 <form action="{{ route('user.editmdp', $user) }}" method="GET">
                     <button class="btn btn-primary" type="submit">Modifier mon mot de passe</button>
                 </form>
+            </div>
+
+            <div class="row">
+                <h1>Mes addresses : </h1>
+                <table class="table">
+                    <tbody>
+                    @foreach($addresses as $address)
+                        <tr class="text-center">
+                            <td class="h2"><a href="{{ route('user.address', $address) }}" class="badge badge-primary">{{ $address->label }}</a></td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+
             </div>
 
         </div>
