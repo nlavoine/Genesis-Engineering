@@ -45,6 +45,8 @@ Route::get('user/address/{address}/edit', 'UserController@editaddress')->name('u
 
 Route::put('user/address/{address}/update', 'UserController@updateaddress')->name('user.updateaddress')->middleware('auth');
 
+Route::get('user/order/{order}', 'UserController@order')->name('user.order')->middleware('auth');
+
 /**
  * Routes Back_Office
  */

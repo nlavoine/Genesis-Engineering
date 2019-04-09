@@ -6,7 +6,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mt-3">
+            <div class="col-md-6 mt-3 mb-3">
                 @if (session('infosuccess'))
                     <div class="alert alert-success">
                         {{ session('infosuccess') }}
@@ -32,11 +32,24 @@
 
             <div class="row">
                 <h1>Mes addresses : </h1>
-                <table class="table">
+                <table class="table mb-5">
                     <tbody>
                     @foreach($addresses as $address)
                         <tr class="text-center">
-                            <td class="h2"><a href="{{ route('user.address', $address) }}" class="badge badge-primary">{{ $address->label }}</a></td>
+                            <td class="h2"><a href="{{ route('user.address', $address) }}"
+                                              class="badge badge-primary">{{ $address->label }}</a></td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+
+                <h1>Mes commandes : </h1>
+                <table class="table mb-5">
+                    <tbody>
+                    @foreach($orders as $order)
+                        <tr class="text-center">
+                            <td class="h2"><a href="{{ route('user.order', $order) }}"
+                                              class="badge badge-primary">{{ $order->number }}</a></td>
                         </tr>
                     @endforeach
                     </tbody>

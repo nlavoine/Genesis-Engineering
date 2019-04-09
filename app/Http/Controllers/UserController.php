@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use App\Http\Requests\UserRequest;
+use App\Order;
+use App\Shipping;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +21,8 @@ class UserController extends Controller
     {
         $user = Auth::user();
         $addresses = Address::all()->where('user_id', $user->id);
-        return view('user.index', ['user' => $user, 'addresses' => $addresses]);
+        $orders = Order::all()->where('user_id', $user->id);
+        return view('user.index', ['user' => $user, 'addresses' => $addresses, 'orders' => $orders]);
     }
 
     /**
@@ -57,6 +60,15 @@ class UserController extends Controller
     public function address(Address $address)
     {
         return view('user.address', ['address' => $address]);
+    }
+
+    public function order(Order $order)
+    {
+        $address_shipping = Address::find($order->address_shipping_id);
+        $address_receipt = Address::find($order->address_receipt_id);
+        $shipping = Shipping::find($order->shipping_id);
+        $order->load('products');
+        return view('user.order', ['order' => $order, 'shipping' => $shipping, 'address_shipping' => $address_shipping, 'address_receipt' => $address_receipt]);
     }
 
     /**

@@ -12,12 +12,6 @@
                         {{ session('infosuccess') }}
                     </div>
                 @endif
-                @if (session('mdpsucces'))
-                    <div class="alert alert-success">
-                        {{ session('mdpsucces') }}
-                    </div>
-                @endif
-
                 <h1>{{ $address->label }}</h1>
                 <p>Label : {{ $address->label }}</p>
                 <p>Nom : {{ $address->last_name }}<p/>
@@ -32,8 +26,6 @@
                     <button class="btn btn-primary" type="submit">Modifier cette adresse</button>
                 </form>
             </div>
-
-
         </div>
     </div>
 

@@ -61,9 +61,6 @@
                     <button class="btn btn-primary" type="submit">Modifier mon adresse</button>
                 </form>
             </div>
-
-
-
         </div>
     </div>
 
