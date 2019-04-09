@@ -21,7 +21,13 @@ Route::get('/category/{category}', 'CategoryController@index')->name('category.i
 
 Route::get('/product/{product}', 'ProductController@show')->name('product.show');
 
+Route::get('/addToCart/{id}', 'ProductController@addToCart')->name('product.addToCart');
+
 Route::get('/cart', 'CartController@index')->name('cart.index');
+
+Route::get('/cart/{id}', 'CartController@destroy')->name('cart.destroy');
+
+Route::post('/cart', 'CartController@update')->name('cart.update');
 
 Route::get('/cart-details', 'CartController@details')->name('cart.details')->middleware('auth');
 

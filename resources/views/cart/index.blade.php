@@ -5,98 +5,95 @@
 @section('content')
     <div class="container mt-5">
         <h1>Votre panier</h1>
-        <div class="row">
-            <div class="col-8">
-                <table class="table cart">
-                    <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        <th scope="col">Prix</th>
-                        <th scope="col">Quantité</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name"
-                                             class="thumbnail"/></th>
-                        <td>
-                            <p class="productName">Designation du produit</p>
-                            <p class="stock">En stock</p>
-                        </td>
-                        <td>3999,49€</td>
-                        <td>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <form name="cart" id="cart" action="{{route('cart.update')}}" method="post">
+                    {{ csrf_field() }}
+                    <table class="table cart">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Quantité</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @if(!is_null($products))
+                            @foreach ($products as $product)
+                                <tr>
+                                    <th scope="row"><img src="{{asset($product->images[0]->url)}}"
+                                                         alt="{{ $product->name }}" class="thumbnail"/></th>
+                                    <td>
+                                        <p class="productName">
+                                            <a href="{{route('product.show', $product->id)}}">{{ $product->name }}</a>
+                                        </p>
+                                        <p class="stock">En stock</p>
+                                    </td>
+                                    <td>{{ $product->price }} €</td>
+                                    <td>
 
-                            <div class="input-group mb-3">
-                                <select class="custom-select rounded-0" id="productQty">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <button class="productDelete"><i class="fa fa-trash"></i></button>
-                            </div>
+                                        <div class="input-group mb-3">
+                                            <select class="custom-select rounded-0" id="{{ $product->id }}" name="{{ $product->id }}">
+                                                @for($i = 1; $i<=10; $i++)
+                                                    <option value="{{$i}}" @if ($listQty[$product->id] == $i) {{'selected'}} @endif>{{$i}}</option>
+                                                @endfor
+                                            </select>
+                                            <a href="{{route('cart.destroy', $product->id)}}" class="productDelete"><i class="fa fa-trash"></i></a>
+                                        </div>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="{{asset('/assets/images/pc1.jpg')}}" alt="Product Name"
-                                             class="thumbnail"/></th>
-                        <td>
-                            <p class="productName">Designation du produit</p>
-                            <p class="stock">En stock</p>
-                        </td>
-                        <td>3999,49€</td>
-                        <td>
-
-                            <div class="input-group mb-3">
-                                <select class="custom-select rounded-0" id="productQty">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <button class="productDelete"><i class="fa fa-trash"></i></button>
-                            </div>
-
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="4">
+                                    <p>Votre panier est vide</p>
+                                </td>
+                            </tr>
+                        @endif
+                        </tbody>
+                    </table>
+                    <button type="submit" class="btn btn-dark">Recalculer le panier</button>
+                </form>
             </div>
-            <div class="col-4">
-                <table class="table price">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <p class="totalPdct">2 articles</p>
-                            <p class="shipping">Livraison</p>
-                        </td>
-                        <td>
-                            <p class="totalPdct text-right">5 000,99 €</p>
-                            <p class="shipping text-right">29,00 €</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="totalPrice">Total H.T.</p>
-                            <p class="taxes">T.V.A.</p>
-                        </td>
-                        <td>
-                            <p class="totalPrice text-right">5 029,99 €</p>
-                            <p class="taxes text-right">0 €</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="text-center">
-                            <form method="get" action="{{route('cart.details')}}">
-                                <input type="submit" class="btn btn-primary btn-lg rounded-0" value="Commander"/>
-                            </form>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            @if(!is_null($products))
+                <div class="col-2">
+                    <table class="table price">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <p class="totalPdct">{{$cart->totalQty}} article(s)</p>
+                                <p class="shipping">Livraison</p>
+                            </td>
+                            <td>
+                                <p class="totalPdct text-right">{{$cart->totalPrice}} €</p>
+                                <p class="shipping text-right">29,00 €</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="totalPrice">Total H.T.</p>
+                                <p class="taxes">T.V.A.</p>
+                            </td>
+                            <td>
+                                <p class="totalPrice text-right">{{$cart->totalPrice + 29}} €</p>
+                                <p class="taxes text-right">0 €</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <form method="get" action="{{route('cart.details')}}">
+                                    <input type="submit" class="btn btn-primary btn-lg rounded-0" value="Commander"/>
+                                </form>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            @endif
         </div>
     </div>
 
