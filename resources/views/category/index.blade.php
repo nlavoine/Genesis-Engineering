@@ -73,8 +73,8 @@
                             <li>
                                 <a href="{{route('product.show', $product->id)}}" role="button"
                                    class="btn btn-primary btn-lg rounded-0">En savoir plus </a>
-                                <button type="button" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier
-                                </button>
+                                <a href="{{route('product.addToCart', $product->id)}}" class="btn btn-secondary btn-lg rounded-0">Ajouter au panier
+                                </a>
                             </li>
                         </ul>
                     </div>

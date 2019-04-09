@@ -32,10 +32,11 @@
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-lg align-items-end">
-                <a class="navbar-brand w-lg-75" href="{{route('home.index')}}"> <img src="{{asset('/assets/images/logo_final.png')}}" alt="" class="img-fluid"> </a>
+                <a class="navbar-brand w-lg-75" href="{{route('home.index')}}"> <img
+                            src="{{asset('/assets/images/logo_final.png')}}" alt="" class="img-fluid"> </a>
 
-                <button class="navbar-toggler navbar-dark float-right" type="button" data-toggle="collapse" data-target="#navbar"
-                        aria-controls="navbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-dark float-right" type="button" data-toggle="collapse"
+                        data-target="#navbar" aria-controls="navbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -52,19 +53,16 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 @php
-                                $categories = \App\Category::all()->where('parent_id', null);
-
-                                foreach($categories as $category){
-
+                                    $categories = \App\Category::where('parent_id', null)->get();
                                 @endphp
-                                    <a class="dropdown-item" href="{{route('category.index', $category->id)}}">{{$category->name}}</a>
-                                @php
-                                }
-                                @endphp
+                                @foreach($categories as $category)
+                                    <a class="dropdown-item"
+                                       href="{{ route('category.index', $category) }}">{{ $category->name }}</a>
+                                @endforeach
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="{{route('contact.index')}}">Contact</a></li>
+                            <a class="nav-link text-light" href="{{ route('contact.index' )}}">Contact</a></li>
                     </ul>
                 </div>
             </nav>
