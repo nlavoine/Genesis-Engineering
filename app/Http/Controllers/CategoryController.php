@@ -10,6 +10,7 @@ class CategoryController extends Controller
 {
     public function index(Category $category){
         $category->load('products');
+
         return view('category.index', ['category' => $category]);
     }
 }

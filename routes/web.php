@@ -25,6 +25,10 @@ Route::get('/addToCart/{id}', 'ProductController@addToCart')->name('product.addT
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
 
+Route::get('/cart/{id}', 'CartController@destroy')->name('cart.destroy');
+
+Route::post('/cart', 'CartController@update')->name('cart.update');
+
 Route::get('/cart-details', 'CartController@details')->name('cart.details')->middleware('auth');
 
 Route::get('/contact', 'ContactUsController@index')->name('contact.index');

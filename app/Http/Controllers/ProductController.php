@@ -29,7 +29,7 @@ class ProductController extends Controller
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        return redirect()-> route('product.show', ['id' => $id]);
+        return redirect()-> route('cart.index', ['id' => $id]);
 
     }
 

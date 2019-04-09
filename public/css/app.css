@@ -10939,6 +10939,8 @@ table.cart .productDelete {
   border: 0;
   background: #393939;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 table.cart tbody tr:hover .productDelete {
