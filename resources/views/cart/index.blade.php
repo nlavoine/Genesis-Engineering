@@ -11,17 +11,18 @@
             <div class="col-7">
                 <form name="cart" id="cart" action="{{route('cart.update')}}" method="post">
                     {{ csrf_field() }}
-                    <table class="table cart">
-                        <thead>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col">Prix</th>
-                            <th scope="col">Quantité</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @if(!is_null($products))
+                    @if(isset($cart))
+                        <table class="table cart">
+                            <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col">Prix</th>
+                                <th scope="col">Quantité</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
                             @foreach ($products as $product)
                                 <tr>
                                     <th scope="row"><img src="{{asset($product->images[0]->url)}}"
@@ -36,30 +37,28 @@
                                     <td>
 
                                         <div class="input-group mb-3">
-                                            <select class="custom-select rounded-0" id="{{ $product->id }}" name="{{ $product->id }}">
+                                            <select class="custom-select rounded-0" id="{{ $product->id }}"
+                                                    name="{{ $product->id }}">
                                                 @for($i = 1; $i<=10; $i++)
                                                     <option value="{{$i}}" @if ($listQty[$product->id] == $i) {{'selected'}} @endif>{{$i}}</option>
                                                 @endfor
-                                            </select>
-                                            <a href="{{route('cart.destroy', $product->id)}}" class="productDelete"><i class="fa fa-trash"></i></a>
+                                            </select> <a href="{{route('cart.destroy', $product->id)}}"
+                                                         class="productDelete"><i class="fa fa-trash"></i></a>
                                         </div>
 
                                     </td>
                                 </tr>
                             @endforeach
-                        @else
-                            <tr>
-                                <td colspan="4">
-                                    <p>Votre panier est vide</p>
-                                </td>
-                            </tr>
-                        @endif
-                        </tbody>
-                    </table>
-                    <button type="submit" class="btn btn-dark">Recalculer le panier</button>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-dark">Recalculer le panier</button>
+                    @else
+                        <p>Votre panier est vide</p>
+                    @endif
+
                 </form>
             </div>
-            @if(!is_null($products))
+            @if($products)
                 <div class="col-2">
                     <table class="table price">
                         <tbody>

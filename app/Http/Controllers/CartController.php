@@ -15,7 +15,7 @@ class CartController extends Controller {
         $listIds = [];
         $listQty = [];
 
-        if (!is_null($cart)) {
+        if ($cart) {
 
             foreach ($cart->items as $item => $qty) {
 
@@ -25,9 +25,9 @@ class CartController extends Controller {
 
             $products = Product::with('images')->find($listIds);
 
-            return view('cart/index', ['products' => $products, 'listQty' => $listQty, 'cart' => $cart]);
+            return view('cart.index', ['products' => $products, 'listQty' => $listQty, 'cart' => $cart]);
         } else {
-            return view('cart/index', ['products' => null]);
+            return view('cart.index', ['products' => null]);
         }
 
     }
@@ -68,9 +68,15 @@ class CartController extends Controller {
             $price = Product::where('id', $item)->value('price');
             $totalPrice += $price * $qty;
         }
-        $cart->totalPrice = $totalPrice;
-        $cart->totalQty = $numPdt;
-        $request->session()->put('cart', $cart);
+
+        if(count($cart->items)>0){
+            $cart->totalPrice = $totalPrice;
+            $cart->totalQty = $numPdt;
+            $request->session()->put('cart', $cart);
+        }else{
+            $request->session()->forget('cart');
+        }
+
 
         return redirect()->route('cart.index');
     }
