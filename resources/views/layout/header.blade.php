@@ -3,25 +3,38 @@
     <div class="container">
         <div class="row justify-content-end">
             <ul class="nav subnav">
+                @if(Auth::check())
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{{route('user.account')}}">Mon compte</a>
+                    <a class="nav-link text-light" href="{{route('user.index')}}">Mon compte</a>
                 </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{route('login')}}">Connexion</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{{route('cart.index')}}">Mon panier</a>
                 </li>
+
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Déconnexion</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Rechercher</a>
                 </li>
             </ul>
-
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-md align-items-end">
-                <a class="navbar-brand" href="/">
-                    <img src="{{asset('/assets/images/logo_final.png')}}" alt="">
-                </a>
+            <nav class="navbar navbar-expand-lg align-items-end">
+                <a class="navbar-brand w-lg-75" href="{{route('home.index')}}"> <img src="{{asset('/assets/images/logo_final.png')}}" alt="" class="img-fluid"> </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                <button class="navbar-toggler navbar-dark float-right" type="button" data-toggle="collapse" data-target="#navbar"
                         aria-controls="navbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,10 +51,16 @@
                                 Gammes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Ordinateurs</a>
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Périphériques</a>
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Fauteuils</a>
-                                <a class="dropdown-item" href="{{route('product.index', 'name')}}">Accessoires</a>
+                                @php
+                                $categories = \App\Category::all()->where('parent_id', null);
+
+                                foreach($categories as $category){
+
+                                @endphp
+                                    <a class="dropdown-item" href="{{route('category.index', $category->id)}}">{{$category->name}}</a>
+                                @php
+                                }
+                                @endphp
                             </div>
                         </li>
                         <li class="nav-item">

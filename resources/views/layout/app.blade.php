@@ -15,7 +15,6 @@
 </head>
 <body>
 @include('layout.header')
-@include('layout.menu')
 
 @yield('content')
 
